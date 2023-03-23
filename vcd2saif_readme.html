@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-11-03 水 13:34 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>VCD2SAIF</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="grunt" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">VCD2SAIF</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orga4bc13f">1. 機能</a></li>
+<li><a href="#org85cbadc">2. 環境準備</a>
+<ul>
+<li><a href="#org740f4d2">2.1. Ubuntu</a></li>
+<li><a href="#org20f8b85">2.2. LISP</a></li>
+<li><a href="#org2ecdf81">2.3. Python</a></li>
+</ul>
+</li>
+<li><a href="#orge3e6a63">3. 使い方</a>
+<ul>
+<li><a href="#orgc94bac2">3.1. VCDファイルをSAIFファイルに変換します</a></li>
+<li><a href="#orgdc0b83f">3.2. VCDファイルを時間間隔で分割して複数のSAIFファイルに変換する</a></li>
+<li><a href="#orgf4eae5d">3.3. 動作時間とダイナミック消費電力CSVファイルを作成します</a></li>
+</ul>
+</li>
+<li><a href="#org812bd5d">4. 測定原理</a>
+<ul>
+<li><a href="#orge560b62">4.1. SAIF ファイル</a></li>
+<li><a href="#org8715ba4">4.2. VCD ファイル</a></li>
+<li><a href="#org2c2adea">4.3. 時間変化電力解析</a></li>
+<li><a href="#orgb916737">4.4. 時間間隔について</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga4bc13f" class="outline-2">
+<h2 id="orga4bc13f"><span class="section-number-2">1.</span> 機能</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>VCDファイルをSAIFファイルに変換します</li>
+<li>VCDファイルを時間間隔で分割して複数のSAIFファイルに変換します
+<ul class="org-ul">
+<li>Vivadoで電力レポートを生成するためのスクリプトを生成します</li>
+</ul></li>
+<li>動作時間とダイナミック消費電力CSVファイルを作成します</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org85cbadc" class="outline-2">
+<h2 id="org85cbadc"><span class="section-number-2">2.</span> 環境準備</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org740f4d2" class="outline-3">
+<h3 id="org740f4d2"><span class="section-number-3">2.1.</span> Ubuntu</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li><a href="https://ubuntu.com/download">Ubuntu Desktop</a>
+<ul class="org-ul">
+<li>必要ではない、お勧めです</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org20f8b85" class="outline-3">
+<h3 id="org20f8b85"><span class="section-number-3">2.2.</span> LISP</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Compiler
+<ul class="org-ul">
+<li><a href="http://www.sbcl.org/">Steel Bank Common Lisp</a>
+<ul class="org-ul">
+<li>必要です</li>
+</ul></li>
+</ul></li>
+<li>Eidtor
+<ul class="org-ul">
+<li><a href="https://www.gnu.org/software/emacs/">GNU Emacs</a>
+<ul class="org-ul">
+<li>必要ではない、お勧めです</li>
+</ul></li>
+<li>Plugins
+<ul class="org-ul">
+<li><a href="https://common-lisp.net/project/slime/">SLIME: The Superior Lisp Interaction Mode for Emacs</a>
+<ul class="org-ul">
+<li>必要ではない、お勧めです</li>
+</ul></li>
+<li><a href="https://www.spacemacs.org/">Spacemacs</a>
+<ul class="org-ul">
+<li>必要ではない、お勧めです</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2ecdf81" class="outline-3">
+<h3 id="org2ecdf81"><span class="section-number-3">2.3.</span> Python</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li><a href="https://www.python.org/downloads/">Python3</a>
+<ul class="org-ul">
+<li>必要です</li>
+</ul></li>
+<li><a href="https://jupyter.org/">The Jupyter Notebook</a>
+<ul class="org-ul">
+<li>必要ではない、お勧めです</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge3e6a63" class="outline-2">
+<h2 id="orge3e6a63"><span class="section-number-2">3.</span> 使い方</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgc94bac2" class="outline-3">
+<h3 id="orgc94bac2"><span class="section-number-3">3.1.</span> VCDファイルをSAIFファイルに変換します</h3>
+<div class="outline-text-3" id="text-3-1">
+<ol class="org-ol">
+<li>LISP環境起動します
+<ol class="org-ol">
+<li>CMDやTerminalやEmacsでLISP環境起動できます</li>
+<li>EmacsやSpacemacsのSLIMEでLISP環境を運行するのがお勧めです</li>
+<li>起動完成したら、(+ 1 1)を入力して、2を出力します</li>
+</ol></li>
+<li><p>
+VCD2SAIFをロードします
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp">CL-USER&gt; <span style="color: #4f97d7;">(</span>load <span style="color: #2d9574;">"vcd2saif.lisp"</span><span style="color: #4f97d7;">)</span>
+T
+CL-USER&gt; <span style="color: #4f97d7;">(</span>use-package 'package_vcd2saif<span style="color: #4f97d7;">)</span>
+T
+</pre>
+</div></li>
+<li><p>
+VCDファイルをSAIFファイルに変換します
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp">CL-USER&gt; <span style="color: #4f97d7;">(</span>vcd2saif <span style="color: #2d9574;">"aes_enc_t_test.vcd"</span> <span style="color: #4f97d7;">:simulation_time</span> <span style="color: #a45bad;">239190000</span><span style="color: #4f97d7;">)</span>
+SAIF file: aes_enc_t_test_vcd2saif.saif
+Final RUN TIME: <span style="color: #a45bad;">25.685743</span> S
+NIL
+</pre>
+</div>
+<ol class="org-ol">
+<li>入力VCDファイル
+<ol class="org-ol">
+<li>"aes_enc_t_test.vcd"
+<ol class="org-ol">
+<li>変換したいVCDファイルです</li>
+</ol></li>
+</ol></li>
+<li>シミュレーション消費時間
+<ol class="org-ol">
+<li>:simulation_time 239190000
+<ol class="org-ol">
+<li>必要引数ではないです、シミュレーション最後の時間情報がVCDファイルに記録していない場合があるので、ここで指定します、指定しなくでも正常に動作できます</li>
+</ol></li>
+</ol></li>
+<li>出力
+<ol class="org-ol">
+<li>SAIFファイル</li>
+</ol></li>
+</ol></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgdc0b83f" class="outline-3">
+<h3 id="orgdc0b83f"><span class="section-number-3">3.2.</span> VCDファイルを時間間隔で分割して複数のSAIFファイルに変換する</h3>
+<div class="outline-text-3" id="text-3-2">
+<ol class="org-ol">
+<li>LISP環境起動します</li>
+<li>VCD2SAIFをロードします</li>
+<li><p>
+VCDファイルを時間間隔で分割して複数のSAIFファイルに変換します
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp">CL-USER&gt; <span style="color: #4f97d7;">(</span>vcd2saif <span style="color: #2d9574;">"aes_enc_t_test.vcd"</span> <span style="color: #4f97d7;">:simulation_time</span> <span style="color: #a45bad;">239190000</span> <span style="color: #4f97d7;">:split_interval</span> <span style="color: #a45bad;">10000</span> <span style="color: #4f97d7;">:tcl_count</span> <span style="color: #a45bad;">4</span><span style="color: #4f97d7;">)</span>
+SAIF file: aes_enc_t_test_0_10000_vcd2saif.saif
+SAIF file: aes_enc_t_test_10000_20000_vcd2saif.saif
+SAIF file: aes_enc_t_test_20000_30000_vcd2saif.saif
+......
+SAIF file: aes_enc_t_test_239160000_239170000_vcd2saif.saif
+SAIF file: aes_enc_t_test_239170000_239180000_vcd2saif.saif
+SAIF file: aes_enc_t_test_239180000_239190000_vcd2saif.saif
+SAIF file: aes_enc_t_test_vcd2saif.saif
+Power analysis script: aes_enc_t_test_vcd2saif.tcl
+Saif file count: <span style="color: #a45bad;">23920</span>
+Split Power analysis script: aes_enc_t_test_0_5980_vcd2saif.tcl
+Split Power analysis script: aes_enc_t_test_5980_11960_vcd2saif.tcl
+Split Power analysis script: aes_enc_t_test_11960_17940_vcd2saif.tcl
+Split Power analysis script: aes_enc_t_test_17940_23920_vcd2saif.tcl
+Final RUN TIME: <span style="color: #a45bad;">3149.9126</span> S
+NIL
+</pre>
+</div>
+<ol class="org-ol">
+<li>入力VCDファイル
+<ol class="org-ol">
+<li>"aes_enc_t_test.vcd"</li>
+</ol></li>
+<li>シミュレーション消費時間
+<ol class="org-ol">
+<li>:simulation_time 239190000</li>
+</ol></li>
+<li>分割間隔
+<ol class="org-ol">
+<li>:split_interval 10000</li>
+</ol></li>
+<li>電力解析スクリプト分割数
+<ol class="org-ol">
+<li>:tcl_count 4
+<ol class="org-ol">
+<li>必要引数ではないです、生成したSAIFファイルが非常に多いの時に、複数のVivadoで電力解析を実行するため、この引数を使います</li>
+</ol></li>
+</ol></li>
+<li>出力
+<ol class="org-ol">
+<li>複数SAIFファイル</li>
+<li>電力解析スクリプト
+<ol class="org-ol">
+<li>Vivadoのコンソールに使えます</li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgf4eae5d" class="outline-3">
+<h3 id="orgf4eae5d"><span class="section-number-3">3.3.</span> 動作時間とダイナミック消費電力CSVファイルを作成します</h3>
+<div class="outline-text-3" id="text-3-3">
+<ol class="org-ol">
+<li>この部分はPython3で書いているので、Python3が必要です</li>
+<li><p>
+機能は複数の電力レポートのダイナミック消費電力データを読み込んで、時間と消費電力のCSVファイルを作ることです
+</p>
+<div class="org-src-container">
+<pre class="src src-python">vcd2saif_power<span style="color: #4f97d7;">(</span><span style="color: #2d9574;">'aes_encrypt_vcd2saif.tcl'</span><span style="color: #4f97d7;">)</span>
+dynamic power: aes_encrypt_vcd2saif_power.csv
+</pre>
+</div>
+<ol class="org-ol">
+<li>入力ファイル
+<ol class="org-ol">
+<li>'aes_encrypt_vcd2saif.tcl'
+<ol class="org-ol">
+<li>電力解析スクリプト
+<ol class="org-ol">
+<li>関数が電力解析スクリプトから電力レポートのファイル名を読み込んで、電力レポートからダイナミック消費電力を読み込みます</li>
+<li>分割電力解析スクリプト引数指定しても、一つ分割しない電力スクリプトを出力するはず、この分割しない電力スクリプトを入力してください</li>
+</ol></li>
+</ol></li>
+</ol></li>
+<li>出力
+<ol class="org-ol">
+<li>時間と消費電力のCSVファイル
+<ol class="org-ol">
+<li>aes_encrypt_vcd2saif_power.csv</li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org812bd5d" class="outline-2">
+<h2 id="org812bd5d"><span class="section-number-2">4.</span> 測定原理</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orge560b62" class="outline-3">
+<h3 id="orge560b62"><span class="section-number-3">4.1.</span> SAIF ファイル</h3>
+<div class="outline-text-3" id="text-4-1">
+<pre class="example" id="orgdadf368">
+(ap_clk (T0 14110000) (T1 14105000) (TX 0) (TZ 0) (TB 0) (TC 5643)
+</pre>
+<p>
+信号ap_clkがT0状態を維持14110000ps、T1状態を維持14105000ps、反転回数が5643である。
+</p>
+</div>
+</div>
+<div id="outline-container-org8715ba4" class="outline-3">
+<h3 id="org8715ba4"><span class="section-number-3">4.2.</span> VCD ファイル</h3>
+<div class="outline-text-3" id="text-4-2">
+<pre class="example" id="orgc72418a">
+$var wire 1 ! ap_clk $end
+#0
+0!
+#5000
+1!
+#10000
+0!
+#15000
+1!
+...
+</pre>
+<p>
+信号ap_clkが0psに0になり、5000psに1になり、10000psに0になり、15000psに1になり
+</p>
+</div>
+</div>
+<div id="outline-container-org2c2adea" class="outline-3">
+<h3 id="org2c2adea"><span class="section-number-3">4.3.</span> 時間変化電力解析</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>信号の周波数が消費電力に影響がある。</li>
+<li>SIAFファイルのTCが実は信号の平均周波数である。</li>
+<li>時間変化消費電力解析するため、信号の平均周波数ではなく、信号の周波数の時間変化を測定するのは必要である。</li>
+<li>VCD2SAIFツールでVCDファイルをSAIFファイルに変換し、分割したSAIFファイルがその短時間の時間間隔の信号周波数を記録し、複数のSAIFファイルが信号の周波数の時間変化を記録している。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb916737" class="outline-3">
+<h3 id="orgb916737"><span class="section-number-3">4.4.</span> 時間間隔について</h3>
+<div class="outline-text-3" id="text-4-4">
+<ul class="org-ul">
+<li>二つ異なる入力平文を暗号化操作します</li>
+<li>回路周期が10nsを設定します</li>
+<li>分割間隔が10nsと5nsを設定します</li>
+<li>二つ平文暗号化操作に、不一致電力消費点を統計します</li>
+<li>10nsと5ns分割して、不一致電力消費点が全部の測定点の割合が近似しています</li>
+<li>ここは二つのtracing不一致ですが、T検定は消費電力の不一致を検定する、tracing数が100万以上</li>
+<li>割合で評価すると、10nsと5ns分割した結果は似ています</li>
+<li>まとめ：時間間隔が回路周期と同じで選択して良いです</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: grunt</p>
+<p class="date">Created: 2021-11-03 水 13:34</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

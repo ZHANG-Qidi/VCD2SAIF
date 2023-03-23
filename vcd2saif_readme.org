@@ -1,0 +1,145 @@
+#+TITLE: VCD2SAIF
+#+AUTHOR: grunt
+#+DATE:
+#+EMAIL:
+#+OPTIONS: H:4
+#+OPTIONS: toc:3
+* 機能
+  - VCDファイルをSAIFファイルに変換します
+  - VCDファイルを時間間隔で分割して複数のSAIFファイルに変換します
+    - Vivadoで電力レポートを生成するためのスクリプトを生成します
+  - 動作時間とダイナミック消費電力CSVファイルを作成します
+* 環境準備
+** Ubuntu
+   - [[https://ubuntu.com/download][Ubuntu Desktop]]
+     - 必要ではない、お勧めです
+** LISP
+   - Compiler
+     - [[http://www.sbcl.org/][Steel Bank Common Lisp]]
+       - 必要です
+   - Eidtor
+     - [[https://www.gnu.org/software/emacs/][GNU Emacs]]
+       - 必要ではない、お勧めです
+     - Plugins
+       - [[https://common-lisp.net/project/slime/][SLIME: The Superior Lisp Interaction Mode for Emacs]]
+         - 必要ではない、お勧めです
+       - [[https://www.spacemacs.org/][Spacemacs]]
+         - 必要ではない、お勧めです
+** Python
+   - [[https://www.python.org/downloads/][Python3]]
+     - 必要です
+   - [[https://jupyter.org/][The Jupyter Notebook]]
+     - 必要ではない、お勧めです
+* 使い方
+** VCDファイルをSAIFファイルに変換します
+   1. LISP環境起動します
+      1. CMDやTerminalやEmacsでLISP環境起動できます
+      2. EmacsやSpacemacsのSLIMEでLISP環境を運行するのがお勧めです
+      3. 起動完成したら、(+ 1 1)を入力して、2を出力します
+   2. VCD2SAIFをロードします
+      #+begin_src lisp
+CL-USER> (load "vcd2saif.lisp")
+T
+CL-USER> (use-package 'package_vcd2saif)
+T
+      #+end_src
+   3. VCDファイルをSAIFファイルに変換します
+      #+begin_src lisp
+CL-USER> (vcd2saif "aes_enc_t_test.vcd" :simulation_time 239190000)
+SAIF file: aes_enc_t_test_vcd2saif.saif
+Final RUN TIME: 25.685743 S
+NIL
+      #+end_src
+      1. 入力VCDファイル
+         1. "aes_enc_t_test.vcd"
+            1. 変換したいVCDファイルです
+      2. シミュレーション消費時間
+         1. :simulation_time 239190000
+            1. 必要引数ではないです、シミュレーション最後の時間情報がVCDファイルに記録していない場合があるので、ここで指定します、指定しなくでも正常に動作できます
+      3. 出力
+         1. SAIFファイル
+** VCDファイルを時間間隔で分割して複数のSAIFファイルに変換する
+   1. LISP環境起動します
+   2. VCD2SAIFをロードします
+   3. VCDファイルを時間間隔で分割して複数のSAIFファイルに変換します
+      #+begin_src lisp
+CL-USER> (vcd2saif "aes_enc_t_test.vcd" :simulation_time 239190000 :split_interval 10000 :tcl_count 4)
+SAIF file: aes_enc_t_test_0_10000_vcd2saif.saif
+SAIF file: aes_enc_t_test_10000_20000_vcd2saif.saif
+SAIF file: aes_enc_t_test_20000_30000_vcd2saif.saif
+......
+SAIF file: aes_enc_t_test_239160000_239170000_vcd2saif.saif
+SAIF file: aes_enc_t_test_239170000_239180000_vcd2saif.saif
+SAIF file: aes_enc_t_test_239180000_239190000_vcd2saif.saif
+SAIF file: aes_enc_t_test_vcd2saif.saif
+Power analysis script: aes_enc_t_test_vcd2saif.tcl
+Saif file count: 23920
+Split Power analysis script: aes_enc_t_test_0_5980_vcd2saif.tcl
+Split Power analysis script: aes_enc_t_test_5980_11960_vcd2saif.tcl
+Split Power analysis script: aes_enc_t_test_11960_17940_vcd2saif.tcl
+Split Power analysis script: aes_enc_t_test_17940_23920_vcd2saif.tcl
+Final RUN TIME: 3149.9126 S
+NIL
+      #+end_src
+      1. 入力VCDファイル
+         1. "aes_enc_t_test.vcd"
+      2. シミュレーション消費時間
+         1. :simulation_time 239190000
+      3. 分割間隔
+         1. :split_interval 10000
+      4. 電力解析スクリプト分割数
+         1. :tcl_count 4
+            1. 必要引数ではないです、生成したSAIFファイルが非常に多いの時に、複数のVivadoで電力解析を実行するため、この引数を使います
+      5. 出力
+         1. 複数SAIFファイル
+         2. 電力解析スクリプト
+            1. Vivadoのコンソールに使えます
+** 動作時間とダイナミック消費電力CSVファイルを作成します
+   1. この部分はPython3で書いているので、Python3が必要です
+   2. 機能は複数の電力レポートのダイナミック消費電力データを読み込んで、時間と消費電力のCSVファイルを作ることです
+      #+begin_src python
+vcd2saif_power('aes_encrypt_vcd2saif.tcl')
+dynamic power: aes_encrypt_vcd2saif_power.csv
+      #+end_src
+      1. 入力ファイル
+         1. 'aes_encrypt_vcd2saif.tcl'
+            1. 電力解析スクリプト
+               1. 関数が電力解析スクリプトから電力レポートのファイル名を読み込んで、電力レポートからダイナミック消費電力を読み込みます
+               2. 分割電力解析スクリプト引数指定しても、一つ分割しない電力スクリプトを出力するはず、この分割しない電力スクリプトを入力してください
+      2. 出力
+         1. 時間と消費電力のCSVファイル
+            1. aes_encrypt_vcd2saif_power.csv
+* 測定原理
+** SAIF ファイル
+   #+begin_example
+(ap_clk (T0 14110000) (T1 14105000) (TX 0) (TZ 0) (TB 0) (TC 5643)
+   #+end_example
+   信号ap_clkがT0状態を維持14110000ps、T1状態を維持14105000ps、反転回数が5643である。
+** VCD ファイル
+   #+begin_example
+$var wire 1 ! ap_clk $end
+#0
+0!
+#5000
+1!
+#10000
+0!
+#15000
+1!
+...
+   #+end_example
+   信号ap_clkが0psに0になり、5000psに1になり、10000psに0になり、15000psに1になり
+** 時間変化電力解析
+   - 信号の周波数が消費電力に影響がある。
+   - SIAFファイルのTCが実は信号の平均周波数である。
+   - 時間変化消費電力解析するため、信号の平均周波数ではなく、信号の周波数の時間変化を測定するのは必要である。
+   - VCD2SAIFツールでVCDファイルをSAIFファイルに変換し、分割したSAIFファイルがその短時間の時間間隔の信号周波数を記録し、複数のSAIFファイルが信号の周波数の時間変化を記録している。
+** 時間間隔について
+   - 二つ異なる入力平文を暗号化操作します
+   - 回路周期が10nsを設定します
+   - 分割間隔が10nsと5nsを設定します
+   - 二つ平文暗号化操作に、不一致電力消費点を統計します
+   - 10nsと5ns分割して、不一致電力消費点が全部の測定点の割合が近似しています
+   - ここは二つのtracing不一致ですが、T検定は消費電力の不一致を検定する、tracing数が100万以上
+   - 割合で評価すると、10nsと5ns分割した結果は似ています
+   - まとめ：時間間隔が回路周期と同じで選択して良いです
