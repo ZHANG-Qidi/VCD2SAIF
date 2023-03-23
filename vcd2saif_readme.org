@@ -17,7 +17,7 @@
    - Compiler
      - [[http://www.sbcl.org/][Steel Bank Common Lisp]]
        - 必要です
-   - Eidtor
+   - Editor
      - [[https://www.gnu.org/software/emacs/][GNU Emacs]]
        - 必要ではない、お勧めです
      - Plugins
