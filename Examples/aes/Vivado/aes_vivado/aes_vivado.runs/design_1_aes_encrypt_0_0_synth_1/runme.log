@@ -1,0 +1,637 @@
+
+*** Running vivado
+    with args -log design_1_aes_encrypt_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_aes_encrypt_0_0.tcl
+
+
+****** Vivado v2020.2.2 (64-bit)
+  **** SW Build 3118627 on Tue Feb  9 05:13:49 MST 2021
+  **** IP Build 3115676 on Tue Feb  9 10:48:11 MST 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source design_1_aes_encrypt_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/grunt/Vitis_HLS/aes_hls/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.2/data/ip'.
+Command: synth_design -top design_1_aes_encrypt_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12029
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2382.012 ; gain = 0.000 ; free physical = 871 ; free virtual = 5697
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_aes_encrypt_0_0' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ip/design_1_aes_encrypt_0_0/synth/design_1_aes_encrypt_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 24'b000000000000000000000001 
+	Parameter ap_ST_fsm_state2 bound to: 24'b000000000000000000000010 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 24'b000000000000000000000100 
+	Parameter ap_ST_fsm_state5 bound to: 24'b000000000000000000001000 
+	Parameter ap_ST_fsm_pp1_stage0 bound to: 24'b000000000000000000010000 
+	Parameter ap_ST_fsm_state8 bound to: 24'b000000000000000000100000 
+	Parameter ap_ST_fsm_state9 bound to: 24'b000000000000000001000000 
+	Parameter ap_ST_fsm_state10 bound to: 24'b000000000000000010000000 
+	Parameter ap_ST_fsm_state11 bound to: 24'b000000000000000100000000 
+	Parameter ap_ST_fsm_state12 bound to: 24'b000000000000001000000000 
+	Parameter ap_ST_fsm_state13 bound to: 24'b000000000000010000000000 
+	Parameter ap_ST_fsm_state14 bound to: 24'b000000000000100000000000 
+	Parameter ap_ST_fsm_state15 bound to: 24'b000000000001000000000000 
+	Parameter ap_ST_fsm_state16 bound to: 24'b000000000010000000000000 
+	Parameter ap_ST_fsm_state17 bound to: 24'b000000000100000000000000 
+	Parameter ap_ST_fsm_state18 bound to: 24'b000000001000000000000000 
+	Parameter ap_ST_fsm_state19 bound to: 24'b000000010000000000000000 
+	Parameter ap_ST_fsm_state20 bound to: 24'b000000100000000000000000 
+	Parameter ap_ST_fsm_state21 bound to: 24'b000001000000000000000000 
+	Parameter ap_ST_fsm_state22 bound to: 24'b000010000000000000000000 
+	Parameter ap_ST_fsm_state23 bound to: 24'b000100000000000000000000 
+	Parameter ap_ST_fsm_state24 bound to: 24'b001000000000000000000000 
+	Parameter ap_ST_fsm_pp4_stage0 bound to: 24'b010000000000000000000000 
+	Parameter ap_ST_fsm_state27 bound to: 24'b100000000000000000000000 
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_word' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_word.v:52]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 480 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_word_ram' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_word.v:6]
+	Parameter DWIDTH bound to: 8 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 480 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_word_ram' (1#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_word.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_word' (2#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_word.v:52]
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_MixColumn_AddRoundKey_ret' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_MixColumn_AddRoundKey_ret.v:52]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 32 - type: integer 
+	Parameter AddressWidth bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_MixColumn_AddRoundKey_ret_ram' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_MixColumn_AddRoundKey_ret.v:6]
+	Parameter DWIDTH bound to: 8 - type: integer 
+	Parameter AWIDTH bound to: 5 - type: integer 
+	Parameter MEM_SIZE bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_MixColumn_AddRoundKey_ret_ram' (3#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_MixColumn_AddRoundKey_ret.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_MixColumn_AddRoundKey_ret' (4#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_MixColumn_AddRoundKey_ret.v:52]
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_key' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_key.v:37]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 32 - type: integer 
+	Parameter AddressWidth bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_key_ram' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_key.v:6]
+	Parameter DWIDTH bound to: 8 - type: integer 
+	Parameter AWIDTH bound to: 5 - type: integer 
+	Parameter MEM_SIZE bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_key_ram' (5#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_key.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_key' (6#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_key.v:37]
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_ByteSub_ShiftRow' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_ByteSub_ShiftRow.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 75'b000000000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter ap_ST_fsm_state2 bound to: 75'b000000000000000000000000000000000000000000000000000000000000000000000000010 
+	Parameter ap_ST_fsm_state3 bound to: 75'b000000000000000000000000000000000000000000000000000000000000000000000000100 
+	Parameter ap_ST_fsm_state4 bound to: 75'b000000000000000000000000000000000000000000000000000000000000000000000001000 
+	Parameter ap_ST_fsm_state5 bound to: 75'b000000000000000000000000000000000000000000000000000000000000000000000010000 
+	Parameter ap_ST_fsm_state6 bound to: 75'b000000000000000000000000000000000000000000000000000000000000000000000100000 
+	Parameter ap_ST_fsm_state7 bound to: 75'b000000000000000000000000000000000000000000000000000000000000000000001000000 
+	Parameter ap_ST_fsm_state8 bound to: 75'b000000000000000000000000000000000000000000000000000000000000000000010000000 
+	Parameter ap_ST_fsm_state9 bound to: 75'b000000000000000000000000000000000000000000000000000000000000000000100000000 
+	Parameter ap_ST_fsm_state10 bound to: 75'b000000000000000000000000000000000000000000000000000000000000000001000000000 
+	Parameter ap_ST_fsm_state11 bound to: 75'b000000000000000000000000000000000000000000000000000000000000000010000000000 
+	Parameter ap_ST_fsm_state12 bound to: 75'b000000000000000000000000000000000000000000000000000000000000000100000000000 
+	Parameter ap_ST_fsm_state13 bound to: 75'b000000000000000000000000000000000000000000000000000000000000001000000000000 
+	Parameter ap_ST_fsm_state14 bound to: 75'b000000000000000000000000000000000000000000000000000000000000010000000000000 
+	Parameter ap_ST_fsm_state15 bound to: 75'b000000000000000000000000000000000000000000000000000000000000100000000000000 
+	Parameter ap_ST_fsm_state16 bound to: 75'b000000000000000000000000000000000000000000000000000000000001000000000000000 
+	Parameter ap_ST_fsm_state17 bound to: 75'b000000000000000000000000000000000000000000000000000000000010000000000000000 
+	Parameter ap_ST_fsm_state18 bound to: 75'b000000000000000000000000000000000000000000000000000000000100000000000000000 
+	Parameter ap_ST_fsm_state19 bound to: 75'b000000000000000000000000000000000000000000000000000000001000000000000000000 
+	Parameter ap_ST_fsm_state20 bound to: 75'b000000000000000000000000000000000000000000000000000000010000000000000000000 
+	Parameter ap_ST_fsm_state21 bound to: 75'b000000000000000000000000000000000000000000000000000000100000000000000000000 
+	Parameter ap_ST_fsm_state22 bound to: 75'b000000000000000000000000000000000000000000000000000001000000000000000000000 
+	Parameter ap_ST_fsm_state23 bound to: 75'b000000000000000000000000000000000000000000000000000010000000000000000000000 
+	Parameter ap_ST_fsm_state24 bound to: 75'b000000000000000000000000000000000000000000000000000100000000000000000000000 
+	Parameter ap_ST_fsm_state25 bound to: 75'b000000000000000000000000000000000000000000000000001000000000000000000000000 
+	Parameter ap_ST_fsm_state26 bound to: 75'b000000000000000000000000000000000000000000000000010000000000000000000000000 
+	Parameter ap_ST_fsm_state27 bound to: 75'b000000000000000000000000000000000000000000000000100000000000000000000000000 
+	Parameter ap_ST_fsm_state28 bound to: 75'b000000000000000000000000000000000000000000000001000000000000000000000000000 
+	Parameter ap_ST_fsm_state29 bound to: 75'b000000000000000000000000000000000000000000000010000000000000000000000000000 
+	Parameter ap_ST_fsm_state30 bound to: 75'b000000000000000000000000000000000000000000000100000000000000000000000000000 
+	Parameter ap_ST_fsm_state31 bound to: 75'b000000000000000000000000000000000000000000001000000000000000000000000000000 
+	Parameter ap_ST_fsm_state32 bound to: 75'b000000000000000000000000000000000000000000010000000000000000000000000000000 
+	Parameter ap_ST_fsm_state33 bound to: 75'b000000000000000000000000000000000000000000100000000000000000000000000000000 
+	Parameter ap_ST_fsm_state34 bound to: 75'b000000000000000000000000000000000000000001000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state35 bound to: 75'b000000000000000000000000000000000000000010000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state36 bound to: 75'b000000000000000000000000000000000000000100000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state37 bound to: 75'b000000000000000000000000000000000000001000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state38 bound to: 75'b000000000000000000000000000000000000010000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state39 bound to: 75'b000000000000000000000000000000000000100000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state40 bound to: 75'b000000000000000000000000000000000001000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state41 bound to: 75'b000000000000000000000000000000000010000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state42 bound to: 75'b000000000000000000000000000000000100000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state43 bound to: 75'b000000000000000000000000000000001000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state44 bound to: 75'b000000000000000000000000000000010000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state45 bound to: 75'b000000000000000000000000000000100000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state46 bound to: 75'b000000000000000000000000000001000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state47 bound to: 75'b000000000000000000000000000010000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state48 bound to: 75'b000000000000000000000000000100000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state49 bound to: 75'b000000000000000000000000001000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state50 bound to: 75'b000000000000000000000000010000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state51 bound to: 75'b000000000000000000000000100000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state52 bound to: 75'b000000000000000000000001000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state53 bound to: 75'b000000000000000000000010000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state54 bound to: 75'b000000000000000000000100000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state55 bound to: 75'b000000000000000000001000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state56 bound to: 75'b000000000000000000010000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state57 bound to: 75'b000000000000000000100000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state58 bound to: 75'b000000000000000001000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state59 bound to: 75'b000000000000000010000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state60 bound to: 75'b000000000000000100000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state61 bound to: 75'b000000000000001000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state62 bound to: 75'b000000000000010000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state63 bound to: 75'b000000000000100000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state64 bound to: 75'b000000000001000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state65 bound to: 75'b000000000010000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state66 bound to: 75'b000000000100000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state67 bound to: 75'b000000001000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state68 bound to: 75'b000000010000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state69 bound to: 75'b000000100000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state70 bound to: 75'b000001000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state71 bound to: 75'b000010000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state72 bound to: 75'b000100000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state73 bound to: 75'b001000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state74 bound to: 75'b010000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state75 bound to: 75'b100000000000000000000000000000000000000000000000000000000000000000000000000 
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_KeySchedule_Sbox' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_KeySchedule_Sbox.v:52]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 256 - type: integer 
+	Parameter AddressWidth bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_KeySchedule_Sbox_rom' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_KeySchedule_Sbox.v:6]
+	Parameter DWIDTH bound to: 8 - type: integer 
+	Parameter AWIDTH bound to: 8 - type: integer 
+	Parameter MEM_SIZE bound to: 256 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './aes_encrypt_KeySchedule_Sbox_rom.dat' is read successfully [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_KeySchedule_Sbox.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_KeySchedule_Sbox_rom' (7#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_KeySchedule_Sbox.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_KeySchedule_Sbox' (8#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_KeySchedule_Sbox.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_ByteSub_ShiftRow' (9#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_ByteSub_ShiftRow.v:10]
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_KeySchedule' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_KeySchedule.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 11'b00000000001 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 11'b00000000010 
+	Parameter ap_ST_fsm_state4 bound to: 11'b00000000100 
+	Parameter ap_ST_fsm_pp1_stage0 bound to: 11'b00000001000 
+	Parameter ap_ST_fsm_pp1_stage1 bound to: 11'b00000010000 
+	Parameter ap_ST_fsm_pp1_stage2 bound to: 11'b00000100000 
+	Parameter ap_ST_fsm_pp1_stage3 bound to: 11'b00001000000 
+	Parameter ap_ST_fsm_pp1_stage4 bound to: 11'b00010000000 
+	Parameter ap_ST_fsm_pp1_stage5 bound to: 11'b00100000000 
+	Parameter ap_ST_fsm_pp1_stage6 bound to: 11'b01000000000 
+	Parameter ap_ST_fsm_state30 bound to: 11'b10000000000 
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_KeySchedule_Rcon0' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_KeySchedule_Rcon0.v:39]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 30 - type: integer 
+	Parameter AddressWidth bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_KeySchedule_Rcon0_rom' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_KeySchedule_Rcon0.v:6]
+	Parameter DWIDTH bound to: 8 - type: integer 
+	Parameter AWIDTH bound to: 5 - type: integer 
+	Parameter MEM_SIZE bound to: 30 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './aes_encrypt_KeySchedule_Rcon0_rom.dat' is read successfully [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_KeySchedule_Rcon0.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_KeySchedule_Rcon0_rom' (10#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_KeySchedule_Rcon0.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_KeySchedule_Rcon0' (11#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_KeySchedule_Rcon0.v:39]
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_mul_4ns_4ns_8_1_1' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_mul_4ns_4ns_8_1_1.v:16]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 4 - type: integer 
+	Parameter din1_WIDTH bound to: 4 - type: integer 
+	Parameter dout_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_mul_4ns_4ns_8_1_1_Multiplier_0' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_mul_4ns_4ns_8_1_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_mul_4ns_4ns_8_1_1_Multiplier_0' (12#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_mul_4ns_4ns_8_1_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_mul_4ns_4ns_8_1_1' (13#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_mul_4ns_4ns_8_1_1.v:16]
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_urem_7ns_4ns_3_11_1' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_urem_7ns_4ns_3_11_1.v:127]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 11 - type: integer 
+	Parameter din0_WIDTH bound to: 7 - type: integer 
+	Parameter din1_WIDTH bound to: 4 - type: integer 
+	Parameter dout_WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_urem_7ns_4ns_3_11_1_div' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_urem_7ns_4ns_3_11_1.v:67]
+	Parameter in0_WIDTH bound to: 7 - type: integer 
+	Parameter in1_WIDTH bound to: 4 - type: integer 
+	Parameter out_WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_urem_7ns_4ns_3_11_1_div_u' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_urem_7ns_4ns_3_11_1.v:7]
+	Parameter in0_WIDTH bound to: 7 - type: integer 
+	Parameter in1_WIDTH bound to: 4 - type: integer 
+	Parameter out_WIDTH bound to: 3 - type: integer 
+	Parameter cal_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_urem_7ns_4ns_3_11_1_div_u' (14#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_urem_7ns_4ns_3_11_1.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_urem_7ns_4ns_3_11_1_div' (15#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_urem_7ns_4ns_3_11_1.v:67]
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_urem_7ns_4ns_3_11_1' (16#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_urem_7ns_4ns_3_11_1.v:127]
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_udiv_7ns_4ns_5_11_1' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_udiv_7ns_4ns_5_11_1.v:127]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 11 - type: integer 
+	Parameter din0_WIDTH bound to: 7 - type: integer 
+	Parameter din1_WIDTH bound to: 4 - type: integer 
+	Parameter dout_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_udiv_7ns_4ns_5_11_1_div' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_udiv_7ns_4ns_5_11_1.v:67]
+	Parameter in0_WIDTH bound to: 7 - type: integer 
+	Parameter in1_WIDTH bound to: 4 - type: integer 
+	Parameter out_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_udiv_7ns_4ns_5_11_1_div_u' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_udiv_7ns_4ns_5_11_1.v:7]
+	Parameter in0_WIDTH bound to: 7 - type: integer 
+	Parameter in1_WIDTH bound to: 4 - type: integer 
+	Parameter out_WIDTH bound to: 5 - type: integer 
+	Parameter cal_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_udiv_7ns_4ns_5_11_1_div_u' (17#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_udiv_7ns_4ns_5_11_1.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_udiv_7ns_4ns_5_11_1_div' (18#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_udiv_7ns_4ns_5_11_1.v:67]
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_udiv_7ns_4ns_5_11_1' (19#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_udiv_7ns_4ns_5_11_1.v:127]
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_KeySchedule' (20#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_KeySchedule.v:10]
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_MixColumn_AddRoundKey' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_MixColumn_AddRoundKey.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 7'b0000001 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 7'b0000010 
+	Parameter ap_ST_fsm_pp0_stage1 bound to: 7'b0000100 
+	Parameter ap_ST_fsm_state6 bound to: 7'b0001000 
+	Parameter ap_ST_fsm_pp1_stage0 bound to: 7'b0010000 
+	Parameter ap_ST_fsm_pp1_stage1 bound to: 7'b0100000 
+	Parameter ap_ST_fsm_state10 bound to: 7'b1000000 
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_mul_4ns_4ns_7_1_1' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_mul_4ns_4ns_7_1_1.v:16]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 4 - type: integer 
+	Parameter din1_WIDTH bound to: 4 - type: integer 
+	Parameter dout_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_mul_4ns_4ns_7_1_1_Multiplier_1' [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_mul_4ns_4ns_7_1_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_mul_4ns_4ns_7_1_1_Multiplier_1' (21#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_mul_4ns_4ns_7_1_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_mul_4ns_4ns_7_1_1' (22#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_mul_4ns_4ns_7_1_1.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_MixColumn_AddRoundKey' (23#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt_MixColumn_AddRoundKey.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt' (24#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ipshared/ca0a/hdl/verilog/aes_encrypt.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_aes_encrypt_0_0' (25#1) [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ip/design_1_aes_encrypt_0_0/synth/design_1_aes_encrypt_0_0.v:58]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2390.918 ; gain = 8.906 ; free physical = 875 ; free virtual = 5711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2408.730 ; gain = 26.719 ; free physical = 879 ; free virtual = 5717
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2408.730 ; gain = 26.719 ; free physical = 879 ; free virtual = 5717
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2408.730 ; gain = 0.000 ; free physical = 868 ; free virtual = 5706
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ip/design_1_aes_encrypt_0_0/constraints/aes_encrypt_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/grunt/Vivado/aes_vivado/aes_vivado.gen/sources_1/bd/design_1/ip/design_1_aes_encrypt_0_0/constraints/aes_encrypt_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/grunt/Vivado/aes_vivado/aes_vivado.runs/design_1_aes_encrypt_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/grunt/Vivado/aes_vivado/aes_vivado.runs/design_1_aes_encrypt_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2545.465 ; gain = 0.000 ; free physical = 750 ; free virtual = 5601
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2551.402 ; gain = 5.938 ; free physical = 748 ; free virtual = 5600
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2551.402 ; gain = 169.391 ; free physical = 843 ; free virtual = 5695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2551.402 ; gain = 169.391 ; free physical = 843 ; free virtual = 5695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/grunt/Vivado/aes_vivado/aes_vivado.runs/design_1_aes_encrypt_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2551.402 ; gain = 169.391 ; free physical = 843 ; free virtual = 5695
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-3971] The signal "aes_encrypt_word_ram:/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "aes_encrypt_MixColumn_AddRoundKey_ret_ram:/ram_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 2551.402 ; gain = 169.391 ; free physical = 830 ; free virtual = 5686
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    9 Bit       Adders := 11    
+	   4 Input    9 Bit       Adders := 1     
+	   3 Input    9 Bit       Adders := 2     
+	   3 Input    8 Bit       Adders := 16    
+	   2 Input    8 Bit       Adders := 4     
+	   2 Input    7 Bit       Adders := 4     
+	   2 Input    6 Bit       Adders := 4     
+	   2 Input    5 Bit       Adders := 4     
+	   3 Input    5 Bit       Adders := 3     
+	   2 Input    4 Bit       Adders := 8     
+	   2 Input    3 Bit       Adders := 1     
++---XORs : 
+	   2 Input    256 Bit         XORs := 1     
+	   2 Input      9 Bit         XORs := 4     
+	   2 Input      8 Bit         XORs := 21    
+	   5 Input      8 Bit         XORs := 4     
+	   2 Input      4 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 4     
++---Registers : 
+	              256 Bit    Registers := 1     
+	               75 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 72    
+	                7 Bit    Registers := 35    
+	                6 Bit    Registers := 17    
+	                5 Bit    Registers := 8     
+	                4 Bit    Registers := 30    
+	                3 Bit    Registers := 29    
+	                2 Bit    Registers := 11    
+	                1 Bit    Registers := 45    
++---RAMs : 
+	               3K Bit	(480 X 8 bit)          RAMs := 1     
+	              256 Bit	(32 X 8 bit)          RAMs := 3     
++---ROMs : 
+	                    ROMs := 4     
++---Muxes : 
+	   2 Input  256 Bit        Muxes := 6     
+	  76 Input   75 Bit        Muxes := 1     
+	   5 Input   61 Bit        Muxes := 1     
+	   3 Input   24 Bit        Muxes := 1     
+	  25 Input   24 Bit        Muxes := 1     
+	   2 Input   22 Bit        Muxes := 1     
+	   2 Input   18 Bit        Muxes := 1     
+	   2 Input   17 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 1     
+	   2 Input   15 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 1     
+	   3 Input   11 Bit        Muxes := 3     
+	  12 Input   11 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 7     
+	   3 Input    9 Bit        Muxes := 2     
+	   7 Input    9 Bit        Muxes := 1     
+	   4 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 50    
+	  44 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 2     
+	   3 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 14    
+	   4 Input    6 Bit        Muxes := 1     
+	   3 Input    6 Bit        Muxes := 1     
+	  69 Input    5 Bit        Muxes := 1     
+	  67 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 16    
+	   3 Input    4 Bit        Muxes := 5     
+	   2 Input    4 Bit        Muxes := 15    
+	   2 Input    3 Bit        Muxes := 6     
+	   3 Input    3 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 6     
+	   2 Input    1 Bit        Muxes := 56    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3971] The signal "inst/word_U/aes_encrypt_word_ram_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "inst/statemt_U/aes_encrypt_MixColumn_AddRoundKey_ret_ram_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "inst/grp_MixColumn_AddRoundKey_fu_465/ret_U/aes_encrypt_MixColumn_AddRoundKey_ret_ram_U/ram_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 2551.402 ; gain = 169.391 ; free physical = 786 ; free virtual = 5654
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++----------------------------------+--------------------------------------------------+---------------+----------------+
+|Module Name                       | RTL Object                                       | Depth x Width | Implemented As | 
++----------------------------------+--------------------------------------------------+---------------+----------------+
+|aes_encrypt_KeySchedule_Rcon0_rom | p_0_out                                          | 32x8          | LUT            | 
+|aes_encrypt_ByteSub_ShiftRow      | Sbox_U/aes_encrypt_KeySchedule_Sbox_rom_U/q0_reg | 256x8         | Block RAM      | 
+|aes_encrypt_ByteSub_ShiftRow      | Sbox_U/aes_encrypt_KeySchedule_Sbox_rom_U/q1_reg | 256x8         | Block RAM      | 
+|aes_encrypt_KeySchedule           | Sbox_U/aes_encrypt_KeySchedule_Sbox_rom_U/q1_reg | 256x8         | Block RAM      | 
+|aes_encrypt_KeySchedule           | Sbox_U/aes_encrypt_KeySchedule_Sbox_rom_U/q0_reg | 256x8         | Block RAM      | 
+|aes_encrypt_KeySchedule           | p_0_out                                          | 32x8          | LUT            | 
++----------------------------------+--------------------------------------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping	Report (see note below)
++--------------------------------------+---------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                           | RTL Object                                                    | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------------------+---------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst                                  | word_U/aes_encrypt_word_ram_U/ram_reg                         | 480 x 8(READ_FIRST)    | W | R | 480 x 8(READ_FIRST)    | W | R | Port A and B     | 1      | 0      | 
+|inst                                  | statemt_U/aes_encrypt_MixColumn_AddRoundKey_ret_ram_U/ram_reg | 32 x 8(READ_FIRST)     | W | R | 32 x 8(READ_FIRST)     | W | R | Port A and B     | 1      | 0      | 
+|inst/grp_MixColumn_AddRoundKey_fu_465 | ret_U/aes_encrypt_MixColumn_AddRoundKey_ret_ram_U/ram_reg     | 32 x 8(READ_FIRST)     | W | R | 32 x 8(READ_FIRST)     | W | R | Port A and B     | 1      | 0      | 
++--------------------------------------+---------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping	Report (see note below)
++------------+-------------------------------------+-----------+----------------------+---------------+
+|Module Name | RTL Object                          | Inference | Size (Depth x Width) | Primitives    | 
++------------+-------------------------------------+-----------+----------------------+---------------+
+|inst        | key_U/aes_encrypt_key_ram_U/ram_reg | Implied   | 32 x 8               | RAM32X1S x 8	 | 
++------------+-------------------------------------+-----------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 2551.402 ; gain = 169.391 ; free physical = 660 ; free virtual = 5536
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:00:58 . Memory (MB): peak = 2586.629 ; gain = 204.617 ; free physical = 627 ; free virtual = 5504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping	Report
++--------------------------------------+---------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                           | RTL Object                                                    | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------------------+---------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst                                  | word_U/aes_encrypt_word_ram_U/ram_reg                         | 480 x 8(READ_FIRST)    | W | R | 480 x 8(READ_FIRST)    | W | R | Port A and B     | 1      | 0      | 
+|inst                                  | statemt_U/aes_encrypt_MixColumn_AddRoundKey_ret_ram_U/ram_reg | 32 x 8(READ_FIRST)     | W | R | 32 x 8(READ_FIRST)     | W | R | Port A and B     | 1      | 0      | 
+|inst/grp_MixColumn_AddRoundKey_fu_465 | ret_U/aes_encrypt_MixColumn_AddRoundKey_ret_ram_U/ram_reg     | 32 x 8(READ_FIRST)     | W | R | 32 x 8(READ_FIRST)     | W | R | Port A and B     | 1      | 0      | 
++--------------------------------------+---------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping	Report
++------------+-------------------------------------+-----------+----------------------+---------------+
+|Module Name | RTL Object                          | Inference | Size (Depth x Width) | Primitives    | 
++------------+-------------------------------------+-----------+----------------------+---------------+
+|inst        | key_U/aes_encrypt_key_ram_U/ram_reg | Implied   | 32 x 8               | RAM32X1S x 8	 | 
++------------+-------------------------------------+-----------+----------------------+---------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/word_U/aes_encrypt_word_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/word_U/aes_encrypt_word_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/statemt_U/aes_encrypt_MixColumn_AddRoundKey_ret_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/statemt_U/aes_encrypt_MixColumn_AddRoundKey_ret_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_ByteSub_ShiftRow_fu_446/Sbox_U/aes_encrypt_KeySchedule_Sbox_rom_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_ByteSub_ShiftRow_fu_446/Sbox_U/aes_encrypt_KeySchedule_Sbox_rom_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_KeySchedule_fu_454/Sbox_U/aes_encrypt_KeySchedule_Sbox_rom_U/q1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_KeySchedule_fu_454/Sbox_U/aes_encrypt_KeySchedule_Sbox_rom_U/q1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_MixColumn_AddRoundKey_fu_465/ret_U/aes_encrypt_MixColumn_AddRoundKey_ret_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_MixColumn_AddRoundKey_fu_465/ret_U/aes_encrypt_MixColumn_AddRoundKey_ret_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2586.629 ; gain = 204.617 ; free physical = 621 ; free virtual = 5498
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 2586.629 ; gain = 204.617 ; free physical = 621 ; free virtual = 5498
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 2586.629 ; gain = 204.617 ; free physical = 621 ; free virtual = 5498
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 2586.629 ; gain = 204.617 ; free physical = 621 ; free virtual = 5498
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 2586.629 ; gain = 204.617 ; free physical = 621 ; free virtual = 5498
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:59 ; elapsed = 00:01:05 . Memory (MB): peak = 2586.629 ; gain = 204.617 ; free physical = 621 ; free virtual = 5498
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:59 ; elapsed = 00:01:05 . Memory (MB): peak = 2586.629 ; gain = 204.617 ; free physical = 621 ; free virtual = 5498
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                                                                                                               | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|aes_encrypt | grp_KeySchedule_fu_454/urem_7ns_4ns_3_11_1_U2/aes_encrypt_urem_7ns_4ns_3_11_1_div_U/aes_encrypt_urem_7ns_4ns_3_11_1_div_u_0/loop[1].remd_tmp_reg[2][0] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|aes_encrypt | grp_KeySchedule_fu_454/urem_7ns_4ns_3_11_1_U2/aes_encrypt_urem_7ns_4ns_3_11_1_div_U/aes_encrypt_urem_7ns_4ns_3_11_1_div_u_0/loop[2].remd_tmp_reg[3][0] | 5      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|aes_encrypt | grp_KeySchedule_fu_454/urem_7ns_4ns_3_11_1_U2/aes_encrypt_urem_7ns_4ns_3_11_1_div_U/aes_encrypt_urem_7ns_4ns_3_11_1_div_u_0/loop[3].remd_tmp_reg[4][0] | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|aes_encrypt | grp_KeySchedule_fu_454/urem_7ns_4ns_3_11_1_U2/aes_encrypt_urem_7ns_4ns_3_11_1_div_U/aes_encrypt_urem_7ns_4ns_3_11_1_div_u_0/loop[4].remd_tmp_reg[5][0] | 7      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|aes_encrypt | grp_KeySchedule_fu_454/urem_7ns_4ns_3_11_1_U2/aes_encrypt_urem_7ns_4ns_3_11_1_div_U/aes_encrypt_urem_7ns_4ns_3_11_1_div_u_0/loop[5].remd_tmp_reg[6][0] | 8      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|aes_encrypt | grp_KeySchedule_fu_454/urem_7ns_4ns_3_11_1_U2/aes_encrypt_urem_7ns_4ns_3_11_1_div_U/remd_reg[0]                                                        | 10     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|aes_encrypt | grp_KeySchedule_fu_454/udiv_7ns_4ns_5_11_1_U3/aes_encrypt_udiv_7ns_4ns_5_11_1_div_U/aes_encrypt_udiv_7ns_4ns_5_11_1_div_u_0/loop[1].remd_tmp_reg[2][0] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|aes_encrypt | grp_KeySchedule_fu_454/udiv_7ns_4ns_5_11_1_U3/aes_encrypt_udiv_7ns_4ns_5_11_1_div_U/aes_encrypt_udiv_7ns_4ns_5_11_1_div_u_0/loop[2].remd_tmp_reg[3][0] | 5      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|aes_encrypt | grp_KeySchedule_fu_454/udiv_7ns_4ns_5_11_1_U3/aes_encrypt_udiv_7ns_4ns_5_11_1_div_U/aes_encrypt_udiv_7ns_4ns_5_11_1_div_u_0/loop[3].remd_tmp_reg[4][0] | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|aes_encrypt | grp_KeySchedule_fu_454/udiv_7ns_4ns_5_11_1_U3/aes_encrypt_udiv_7ns_4ns_5_11_1_div_U/aes_encrypt_udiv_7ns_4ns_5_11_1_div_u_0/loop[4].remd_tmp_reg[5][0] | 7      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|aes_encrypt | grp_KeySchedule_fu_454/udiv_7ns_4ns_5_11_1_U3/aes_encrypt_udiv_7ns_4ns_5_11_1_div_U/aes_encrypt_udiv_7ns_4ns_5_11_1_div_u_0/loop[5].remd_tmp_reg[6][0] | 8      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|aes_encrypt | grp_KeySchedule_fu_454/udiv_7ns_4ns_5_11_1_U3/aes_encrypt_udiv_7ns_4ns_5_11_1_div_U/quot_reg[4]                                                        | 6      | 1     | NO           | NO                 | NO                | 1      | 0       | 
+|aes_encrypt | grp_KeySchedule_fu_454/udiv_7ns_4ns_5_11_1_U3/aes_encrypt_udiv_7ns_4ns_5_11_1_div_U/quot_reg[3]                                                        | 5      | 1     | NO           | NO                 | NO                | 1      | 0       | 
+|aes_encrypt | grp_KeySchedule_fu_454/udiv_7ns_4ns_5_11_1_U3/aes_encrypt_udiv_7ns_4ns_5_11_1_div_U/quot_reg[2]                                                        | 4      | 1     | NO           | NO                 | NO                | 1      | 0       | 
+|aes_encrypt | grp_KeySchedule_fu_454/udiv_7ns_4ns_5_11_1_U3/aes_encrypt_udiv_7ns_4ns_5_11_1_div_U/quot_reg[1]                                                        | 3      | 1     | NO           | NO                 | NO                | 1      | 0       | 
+|aes_encrypt | grp_KeySchedule_fu_454/j_9_cast_reg_1003_pp1_iter2_reg_reg[6]                                                                                          | 3      | 7     | NO           | NO                 | YES               | 7      | 0       | 
+|aes_encrypt | grp_KeySchedule_fu_454/urem_7ns_4ns_3_11_1_U2/aes_encrypt_urem_7ns_4ns_3_11_1_div_U/aes_encrypt_urem_7ns_4ns_3_11_1_div_u_0/loop[0].remd_tmp_reg[1][0] | 3      | 4     | NO           | NO                 | YES               | 4      | 0       | 
+|aes_encrypt | grp_KeySchedule_fu_454/udiv_7ns_4ns_5_11_1_U3/aes_encrypt_udiv_7ns_4ns_5_11_1_div_U/aes_encrypt_udiv_7ns_4ns_5_11_1_div_u_0/loop[0].remd_tmp_reg[1][0] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    15|
+|2     |LUT1     |    27|
+|3     |LUT2     |   195|
+|4     |LUT3     |   208|
+|5     |LUT4     |   223|
+|6     |LUT5     |   442|
+|7     |LUT6     |  1015|
+|8     |MUXF7    |    70|
+|9     |RAM32X1S |     8|
+|10    |RAMB18E1 |     5|
+|12    |SRL16E   |    27|
+|13    |FDRE     |  1444|
+|14    |FDSE     |     5|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:59 ; elapsed = 00:01:05 . Memory (MB): peak = 2586.629 ; gain = 204.617 ; free physical = 621 ; free virtual = 5498
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2586.629 ; gain = 61.945 ; free physical = 674 ; free virtual = 5551
+Synthesis Optimization Complete : Time (s): cpu = 00:01:00 ; elapsed = 00:01:05 . Memory (MB): peak = 2586.637 ; gain = 204.617 ; free physical = 674 ; free virtual = 5551
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2586.637 ; gain = 0.000 ; free physical = 760 ; free virtual = 5638
+INFO: [Netlist 29-17] Analyzing 98 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2586.637 ; gain = 0.000 ; free physical = 706 ; free virtual = 5584
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  RAM32X1S => RAM32X1S (RAMS32): 8 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+91 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 2586.637 ; gain = 204.719 ; free physical = 875 ; free virtual = 5754
+INFO: [Common 17-1381] The checkpoint '/home/grunt/Vivado/aes_vivado/aes_vivado.runs/design_1_aes_encrypt_0_0_synth_1/design_1_aes_encrypt_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_aes_encrypt_0_0, cache-ID = 0f5ccc306b605f0e
+INFO: [Coretcl 2-1174] Renamed 30 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/grunt/Vivado/aes_vivado/aes_vivado.runs/design_1_aes_encrypt_0_0_synth_1/design_1_aes_encrypt_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_aes_encrypt_0_0_utilization_synth.rpt -pb design_1_aes_encrypt_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 17 15:51:39 2022...

@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"aes_time_impl.v" \
+"../../../../../aes_vivado.srcs/sim_1/new/aes.v" \
+
+# Do not sort compile order
+nosort

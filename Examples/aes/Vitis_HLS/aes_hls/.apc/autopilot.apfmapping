@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="aes_AddRoundKey.cpp" path="/home/grunt/Vitis_HLS/aes_hls/src/common/aes_AddRoundKey.cpp"/>
+    <originFiles name="aes_AddRoundKey.h" path="/home/grunt/Vitis_HLS/aes_hls/src/common/aes_AddRoundKey.h"/>
+    <originFiles name="aes_KeySchedule.cpp" path="/home/grunt/Vitis_HLS/aes_hls/src/common/aes_KeySchedule.cpp"/>
+    <originFiles name="aes_KeySchedule.h" path="/home/grunt/Vitis_HLS/aes_hls/src/common/aes_KeySchedule.h"/>
+    <originFiles name="aes_TypeConvert.cpp" path="/home/grunt/Vitis_HLS/aes_hls/src/common/aes_TypeConvert.cpp"/>
+    <originFiles name="aes_TypeConvert.h" path="/home/grunt/Vitis_HLS/aes_hls/src/common/aes_TypeConvert.h"/>
+    <originFiles name="aes_dec.cpp" path="/home/grunt/Vitis_HLS/aes_hls/src/decrypt/aes_dec.cpp"/>
+    <originFiles name="aes_dec.h" path="/home/grunt/Vitis_HLS/aes_hls/src/decrypt/aes_dec.h"/>
+    <originFiles name="aes_dec_func.cpp" path="/home/grunt/Vitis_HLS/aes_hls/src/decrypt/aes_dec_func.cpp"/>
+    <originFiles name="aes_dec_func.h" path="/home/grunt/Vitis_HLS/aes_hls/src/decrypt/aes_dec_func.h"/>
+    <originFiles name="aes_enc.cpp" path="/home/grunt/Vitis_HLS/aes_hls/src/encrypt/aes_enc.cpp"/>
+    <originFiles name="aes_enc.h" path="/home/grunt/Vitis_HLS/aes_hls/src/encrypt/aes_enc.h"/>
+    <originFiles name="aes_enc_func.cpp" path="/home/grunt/Vitis_HLS/aes_hls/src/encrypt/aes_enc_func.cpp"/>
+    <originFiles name="aes_enc_func.h" path="/home/grunt/Vitis_HLS/aes_hls/src/encrypt/aes_enc_func.h"/>
+  </source>
+  <testbench>
+    <originFiles name="aes_tb.cpp" path="/home/grunt/Vitis_HLS/aes_hls/src/aes_tb.cpp"/>
+    <originFiles name="aes_tb.h" path="/home/grunt/Vitis_HLS/aes_hls/src/aes_tb.h"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

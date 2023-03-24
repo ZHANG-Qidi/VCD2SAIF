@@ -1,0 +1,13 @@
+   Build using "/tools/Xilinx/Vitis_HLS/2020.2/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling aes_tb.cpp_pre.cpp.tb.cpp
+   Compiling aes_enc.cpp_pre.cpp.tb.cpp
+   Compiling apatb_aes_encrypt_util.cpp
+   Compiling aes_enc_func.cpp_pre.cpp.tb.cpp
+   Compiling aes_AddRoundKey.cpp_pre.cpp.tb.cpp
+   Compiling apatb_aes_encrypt.cpp
+   Compiling aes_dec.cpp_pre.cpp.tb.cpp
+   Compiling aes_KeySchedule.cpp_pre.cpp.tb.cpp
+   Compiling aes_dec_func.cpp_pre.cpp.tb.cpp
+   Compiling aes_TypeConvert.cpp_pre.cpp.tb.cpp
+   Compiling apatb_aes_encrypt_ir.ll
+   Generating cosim.tv.exe

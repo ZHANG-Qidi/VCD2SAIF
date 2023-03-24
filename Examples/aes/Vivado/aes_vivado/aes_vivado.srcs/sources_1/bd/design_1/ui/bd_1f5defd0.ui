@@ -1,0 +1,29 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-301,-241",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port ap_ctrl_0 -pg 1 -lvl 0 -x -10 -y -90 -defaultsOSRD
+preplace port ap_clk_0 -pg 1 -lvl 0 -x -10 -y -70 -defaultsOSRD
+preplace port ap_rst_0 -pg 1 -lvl 0 -x -10 -y -50 -defaultsOSRD
+preplace port statemt256_o_ap_vld_0 -pg 1 -lvl 2 -x 450 -y -50 -defaultsOSRD
+preplace portBus key256_0 -pg 1 -lvl 0 -x -10 -y -10 -defaultsOSRD
+preplace portBus statemt256_i_0 -pg 1 -lvl 0 -x -10 -y -30 -defaultsOSRD
+preplace portBus statemt256_o_0 -pg 1 -lvl 2 -x 450 -y -30 -defaultsOSRD
+preplace portBus type_r_0 -pg 1 -lvl 0 -x -10 -y 10 -defaultsOSRD
+preplace inst aes_encrypt_0 -pg 1 -lvl 1 -x 220 -y -40 -defaultsOSRD
+preplace netloc ap_clk_0_1 1 0 1 NJ -70
+preplace netloc ap_rst_0_1 1 0 1 NJ -50
+preplace netloc key256_0_1 1 0 1 NJ -10
+preplace netloc statemt256_i_0_1 1 0 1 NJ -30
+preplace netloc aes_encrypt_0_statemt256_o 1 1 1 NJ -30
+preplace netloc aes_encrypt_0_statemt256_o_ap_vld 1 1 1 NJ -50
+preplace netloc type_r_0_1 1 0 1 NJ 10
+preplace netloc ap_ctrl_0_1 1 0 1 NJ -90
+levelinfo -pg 1 -10 220 450
+pagesize -pg 1 -db -bbox -sgen -230 -150 670 220
+"
+}
+

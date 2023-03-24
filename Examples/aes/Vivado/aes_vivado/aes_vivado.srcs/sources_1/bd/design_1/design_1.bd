@@ -1,0 +1,179 @@
+{
+    "design": {
+        "design_info": {
+            "boundary_crc": "0x3ED840B6112EDB2E",
+            "device": "xc7z020clg484-1",
+            "gen_directory": "../../../../aes_vivado.gen/sources_1/bd/design_1",
+            "name": "design_1",
+            "rev_ctrl_bd_flag": "RevCtrlBdOff",
+            "synth_flow_mode": "Hierarchical",
+            "tool_version": "2020.2.2",
+            "validated": "true"
+        },
+        "design_tree": {
+            "aes_encrypt_0": ""
+        },
+        "interface_ports": {
+            "ap_ctrl_0": {
+                "mode": "Slave",
+                "vlnv": "xilinx.com:interface:acc_handshake_rtl:1.0"
+            }
+        },
+        "ports": {
+            "ap_clk_0": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                    "ASSOCIATED_RESET": {
+                        "value": "ap_rst_0",
+                        "value_src": "default"
+                    },
+                    "CLK_DOMAIN": {
+                        "value": "design_1_ap_clk_0",
+                        "value_src": "default"
+                    },
+                    "FREQ_HZ": {
+                        "value": "100000000",
+                        "value_src": "default"
+                    },
+                    "FREQ_TOLERANCE_HZ": {
+                        "value": "0",
+                        "value_src": "default"
+                    },
+                    "INSERT_VIP": {
+                        "value": "0",
+                        "value_src": "default"
+                    },
+                    "PHASE": {
+                        "value": "0.000",
+                        "value_src": "default"
+                    }
+                }
+            },
+            "ap_rst_0": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                    "INSERT_VIP": {
+                        "value": "0",
+                        "value_src": "default"
+                    },
+                    "POLARITY": {
+                        "value": "ACTIVE_HIGH"
+                    }
+                }
+            },
+            "key256_0": {
+                "type": "data",
+                "direction": "I",
+                "left": "255",
+                "right": "0",
+                "parameters": {
+                    "LAYERED_METADATA": {
+                        "value": "undef",
+                        "value_src": "default"
+                    }
+                }
+            },
+            "statemt256_i_0": {
+                "type": "data",
+                "direction": "I",
+                "left": "255",
+                "right": "0",
+                "parameters": {
+                    "LAYERED_METADATA": {
+                        "value": "undef",
+                        "value_src": "default"
+                    }
+                }
+            },
+            "statemt256_o_0": {
+                "type": "data",
+                "direction": "O",
+                "left": "255",
+                "right": "0",
+                "parameters": {
+                    "LAYERED_METADATA": {
+                        "value": "undef",
+                        "value_src": "default"
+                    }
+                }
+            },
+            "statemt256_o_ap_vld_0": {
+                "direction": "O"
+            },
+            "type_r_0": {
+                "type": "data",
+                "direction": "I",
+                "left": "31",
+                "right": "0",
+                "parameters": {
+                    "LAYERED_METADATA": {
+                        "value": "undef",
+                        "value_src": "default"
+                    }
+                }
+            }
+        },
+        "components": {
+            "aes_encrypt_0": {
+                "vlnv": "xilinx.com:hls:aes_encrypt:1.0",
+                "xci_name": "design_1_aes_encrypt_0_0",
+                "xci_path": "ip/design_1_aes_encrypt_0_0/design_1_aes_encrypt_0_0.xci",
+                "inst_hier_path": "aes_encrypt_0"
+            }
+        },
+        "interface_nets": {
+            "ap_ctrl_0_1": {
+                "interface_ports": [
+                    "ap_ctrl_0",
+                    "aes_encrypt_0/ap_ctrl"
+                ]
+            }
+        },
+        "nets": {
+            "ap_clk_0_1": {
+                "ports": [
+                    "ap_clk_0",
+                    "aes_encrypt_0/ap_clk"
+                ]
+            },
+            "ap_rst_0_1": {
+                "ports": [
+                    "ap_rst_0",
+                    "aes_encrypt_0/ap_rst"
+                ]
+            },
+            "key256_0_1": {
+                "ports": [
+                    "key256_0",
+                    "aes_encrypt_0/key256"
+                ]
+            },
+            "statemt256_i_0_1": {
+                "ports": [
+                    "statemt256_i_0",
+                    "aes_encrypt_0/statemt256_i"
+                ]
+            },
+            "aes_encrypt_0_statemt256_o": {
+                "ports": [
+                    "aes_encrypt_0/statemt256_o",
+                    "statemt256_o_0"
+                ]
+            },
+            "aes_encrypt_0_statemt256_o_ap_vld": {
+                "ports": [
+                    "aes_encrypt_0/statemt256_o_ap_vld",
+                    "statemt256_o_ap_vld_0"
+                ]
+            },
+            "type_r_0_1": {
+                "ports": [
+                    "type_r_0",
+                    "aes_encrypt_0/type_r"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../src/aes_tb.cpp in debug mode
+   Compiling ../../../src/encrypt/aes_enc_func.cpp in debug mode
+   Compiling ../../../src/encrypt/aes_enc.cpp in debug mode
+   Compiling ../../../src/decrypt/aes_dec_func.cpp in debug mode
+   Compiling ../../../src/decrypt/aes_dec.cpp in debug mode
+   Compiling ../../../src/common/aes_TypeConvert.cpp in debug mode
+   Compiling ../../../src/common/aes_KeySchedule.cpp in debug mode
+   Compiling ../../../src/common/aes_AddRoundKey.cpp in debug mode
+   Generating csim.exe
+Run in AES128128 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF
+encrypted message	0x079ABC5C23868AD84D388CE61110A6274
+decrypted message	0
+
+Run in AES192128 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF
+encrypted message	0x076DE42A339B5CBE15DA21FB40E98F8FE
+decrypted message	0
+
+Run in AES256128 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF
+encrypted message	0x070DB6635C2AF9E3713E3EAA051937C7B
+decrypted message	0
+
+Run in AES128192 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF
+encrypted message	0x045F85691061E73B1715F41B3527B0097569F3E3A7DF8E90B
+decrypted message	0
+
+Run in AES192192 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF
+encrypted message	0x0268DCE3331FAE7FD9DE7F641E5F5999F01DC8BF82052B207
+decrypted message	0
+
+Run in AES256192 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF
+encrypted message	0x0C3A497AF0AF1961ED17059FC837003C1E394CABCD60A195
+decrypted message	0
+
+Run in AES128256 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF
+encrypted message	0xEA685EB9ECC3DD5969CCC56EFF04D1D4BE8737180F00B3E85401B28FF3FB18B8
+decrypted message	0
+
+Run in AES192256 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF
+encrypted message	0xB0C8DCEEE09B66996419938BF0DCFED18380C308216E7E32A6A6A639BE7AF8C6
+decrypted message	0
+
+Run in AES256256 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF
+encrypted message	0x9F3DAD3DD09E57FEDD050C94350D6FAF1B35D4E81E3796E27BF5BE6B7B3AF2C1
+decrypted message	0
+
+Check decrypted message = 000
+0
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

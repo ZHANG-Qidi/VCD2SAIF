@@ -1,0 +1,229 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 213.003 MB.
+INFO: [HLS 200-10] Analyzing design file 'aes_hls/src/encrypt/aes_enc_func.cpp' ... 
+WARNING: [HLS 207-4801] 'register' storage class specifier is deprecated and incompatible with C++17: aes_hls/src/encrypt/aes_enc_func.cpp:219:3
+INFO: [HLS 200-10] Analyzing design file 'aes_hls/src/encrypt/aes_enc.cpp' ... 
+WARNING: [HLS 207-4827] equality comparison with extraneous parentheses: /tools/Xilinx/Vitis_HLS/2020.2/include/gmp.h:2227:383
+INFO: [HLS 207-4181] remove extraneous parentheses around the comparison to silence this warning: /tools/Xilinx/Vitis_HLS/2020.2/include/gmp.h:2227:383
+INFO: [HLS 207-4182] use '=' to turn this equality comparison into an assignment: /tools/Xilinx/Vitis_HLS/2020.2/include/gmp.h:2227:383
+INFO: [HLS 200-10] Analyzing design file 'aes_hls/src/decrypt/aes_dec_func.cpp' ... 
+WARNING: [HLS 207-4801] 'register' storage class specifier is deprecated and incompatible with C++17: aes_hls/src/decrypt/aes_dec_func.cpp:204:3
+INFO: [HLS 200-10] Analyzing design file 'aes_hls/src/decrypt/aes_dec.cpp' ... 
+WARNING: [HLS 207-4827] equality comparison with extraneous parentheses: /tools/Xilinx/Vitis_HLS/2020.2/include/gmp.h:2227:383
+INFO: [HLS 207-4181] remove extraneous parentheses around the comparison to silence this warning: /tools/Xilinx/Vitis_HLS/2020.2/include/gmp.h:2227:383
+INFO: [HLS 207-4182] use '=' to turn this equality comparison into an assignment: /tools/Xilinx/Vitis_HLS/2020.2/include/gmp.h:2227:383
+INFO: [HLS 200-10] Analyzing design file 'aes_hls/src/common/aes_TypeConvert.cpp' ... 
+WARNING: [HLS 207-4827] equality comparison with extraneous parentheses: /tools/Xilinx/Vitis_HLS/2020.2/include/gmp.h:2227:383
+INFO: [HLS 207-4181] remove extraneous parentheses around the comparison to silence this warning: /tools/Xilinx/Vitis_HLS/2020.2/include/gmp.h:2227:383
+INFO: [HLS 207-4182] use '=' to turn this equality comparison into an assignment: /tools/Xilinx/Vitis_HLS/2020.2/include/gmp.h:2227:383
+INFO: [HLS 200-10] Analyzing design file 'aes_hls/src/common/aes_KeySchedule.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'aes_hls/src/common/aes_AddRoundKey.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 13.58 seconds. CPU system time: 1.3 seconds. Elapsed time: 14.87 seconds; current allocated memory: 215.355 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'U256toU8(ap_uint<256>, unsigned char*, int)' into 'aes_encrypt(ap_uint<256>*, ap_uint<256>, int)' (aes_hls/src/encrypt/aes_enc.cpp:72:0)
+INFO: [HLS 214-178] Inlining function 'AddRoundKey(unsigned char*, int, unsigned char, unsigned char (*) [120])' into 'aes_encrypt(ap_uint<256>*, ap_uint<256>, int)' (aes_hls/src/encrypt/aes_enc.cpp:72:0)
+INFO: [HLS 214-178] Inlining function 'U8toU256(ap_uint<256>*, unsigned char*, int)' into 'aes_encrypt(ap_uint<256>*, ap_uint<256>, int)' (aes_hls/src/encrypt/aes_enc.cpp:72:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 6.99 seconds. CPU system time: 0.3 seconds. Elapsed time: 7.29 seconds; current allocated memory: 220.638 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 220.639 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 224.031 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_ref.h:708: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.28 seconds. CPU system time: 0 seconds. Elapsed time: 0.3 seconds; current allocated memory: 225.675 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_155_2' (aes_hls/src/common/aes_KeySchedule.cpp:102) in function 'KeySchedule' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_161_3' (aes_hls/src/common/aes_KeySchedule.cpp:102) in function 'KeySchedule' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_228_1' (aes_hls/src/encrypt/aes_enc_func.cpp:217) in function 'MixColumn_AddRoundKey' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_281_2' (aes_hls/src/encrypt/aes_enc_func.cpp:217) in function 'MixColumn_AddRoundKey' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_16_1' (aes_hls/src/common/aes_TypeConvert.cpp:16) in function 'aes_encrypt' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_16_1' (aes_hls/src/common/aes_TypeConvert.cpp:16) in function 'aes_encrypt' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_25_1' (aes_hls/src/common/aes_AddRoundKey.cpp:6) in function 'aes_encrypt' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_25_1' (aes_hls/src/common/aes_AddRoundKey.cpp:6) in function 'aes_encrypt' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_36_1' (aes_hls/src/common/aes_TypeConvert.cpp:36) in function 'aes_encrypt' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_161_3' (aes_hls/src/common/aes_KeySchedule.cpp:102) in function 'KeySchedule' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_180_4' (aes_hls/src/common/aes_KeySchedule.cpp:102) in function 'KeySchedule' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_182_5' (aes_hls/src/common/aes_KeySchedule.cpp:102) in function 'KeySchedule' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'temp' (aes_hls/src/common/aes_KeySchedule.cpp:102) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (aes_hls/src/common/aes_TypeConvert.cpp:16:19) in function 'aes_encrypt'... converting 10 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (aes_hls/src/encrypt/aes_enc.cpp:135:2) to (aes_hls/src/common/aes_AddRoundKey.cpp:25:20) in function 'aes_encrypt'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (aes_hls/src/encrypt/aes_enc.cpp:174:2) to (aes_hls/src/common/aes_AddRoundKey.cpp:25:20) in function 'aes_encrypt'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (aes_hls/src/common/aes_TypeConvert.cpp:21:29) to (aes_hls/src/common/aes_TypeConvert.cpp:36:19) in function 'aes_encrypt'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.8 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.82 seconds; current allocated memory: 250.139 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_154_1' (aes_hls/src/common/aes_KeySchedule.cpp:102:20) in function 'KeySchedule'.
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/common/aes_TypeConvert.cpp:17:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/common/aes_AddRoundKey.cpp:26:20)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/common/aes_AddRoundKey.cpp:27:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/common/aes_AddRoundKey.cpp:28:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/common/aes_AddRoundKey.cpp:29:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'ret' (aes_hls/src/encrypt/aes_enc_func.cpp:242:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'ret' (aes_hls/src/encrypt/aes_enc_func.cpp:254:20)
+INFO: [HLS 200-472] Inferring partial write operation for 'ret' (aes_hls/src/encrypt/aes_enc_func.cpp:266:20)
+INFO: [HLS 200-472] Inferring partial write operation for 'ret' (aes_hls/src/encrypt/aes_enc_func.cpp:278:20)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:282:20)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:283:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:284:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:285:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'word' (aes_hls/src/common/aes_KeySchedule.cpp:157:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'word' (aes_hls/src/common/aes_KeySchedule.cpp:184:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:94:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:95:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:96:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:97:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:100:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:101:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:103:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:104:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:107:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:108:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:109:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:110:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:112:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:113:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:114:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:115:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:127:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:128:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:129:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:130:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:131:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:132:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:135:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:136:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:137:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:139:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:140:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:141:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:144:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:145:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:147:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:148:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:150:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:151:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:153:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:154:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:155:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:156:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:157:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:158:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:170:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:171:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:172:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:173:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:174:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:175:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:176:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:177:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:180:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:181:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:182:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:183:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:184:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:185:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:186:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:187:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:190:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:191:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:193:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:194:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:196:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:197:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:199:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:200:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:202:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:203:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:204:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:205:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:206:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:207:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:208:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'statemt' (aes_hls/src/encrypt/aes_enc_func.cpp:209:17)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.77 seconds. CPU system time: 0.03 seconds. Elapsed time: 1 seconds; current allocated memory: 276.997 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'aes_encrypt' ...
+WARNING: [SYN 201-107] Renaming port name 'aes_encrypt/type' to 'aes_encrypt/type_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'KeySchedule' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_154_1_VITIS_LOOP_155_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_154_1_VITIS_LOOP_155_2'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_161_3'.
+WARNING: [HLS 200-880] The II Violation in module 'KeySchedule' (loop 'VITIS_LOOP_161_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('word_addr_17_write_ln184', aes_hls/src/common/aes_KeySchedule.cpp:184) of variable 'xor_ln184_1', aes_hls/src/common/aes_KeySchedule.cpp:184 on array 'word' and 'load' operation ('temp[1]', aes_hls/src/common/aes_KeySchedule.cpp:174) on array 'word'.
+WARNING: [HLS 200-880] The II Violation in module 'KeySchedule' (loop 'VITIS_LOOP_161_3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('word_addr_17_write_ln184', aes_hls/src/common/aes_KeySchedule.cpp:184) of variable 'xor_ln184_1', aes_hls/src/common/aes_KeySchedule.cpp:184 on array 'word' and 'load' operation ('temp[1]', aes_hls/src/common/aes_KeySchedule.cpp:174) on array 'word'.
+WARNING: [HLS 200-880] The II Violation in module 'KeySchedule' (loop 'VITIS_LOOP_161_3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('word_addr_17_write_ln184', aes_hls/src/common/aes_KeySchedule.cpp:184) of variable 'xor_ln184_1', aes_hls/src/common/aes_KeySchedule.cpp:184 on array 'word' and 'load' operation ('temp[1]', aes_hls/src/common/aes_KeySchedule.cpp:174) on array 'word'.
+WARNING: [HLS 200-885] Unable to schedule 'load' operation ('temp[1]', aes_hls/src/common/aes_KeySchedule.cpp:174) on array 'word' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'word'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 7, Depth = 25, loop 'VITIS_LOOP_161_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.38 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.4 seconds; current allocated memory: 277.923 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 278.767 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ByteSub_ShiftRow' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.57 seconds. CPU system time: 0 seconds. Elapsed time: 0.57 seconds; current allocated memory: 280.054 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.56 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.57 seconds; current allocated memory: 281.661 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MixColumn_AddRoundKey' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_228_1'.
+WARNING: [HLS 200-885] Unable to schedule 'load' operation ('word_load_9', aes_hls/src/encrypt/aes_enc_func.cpp:266) on array 'word' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'word'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 4, loop 'VITIS_LOOP_228_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_281_2'.
+WARNING: [HLS 200-885] Unable to schedule 'load' operation ('ret_load_2', aes_hls/src/encrypt/aes_enc_func.cpp:284) on array 'ret', aes_hls/src/encrypt/aes_enc_func.cpp:218 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'ret'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 3, loop 'VITIS_LOOP_281_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.31 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.34 seconds; current allocated memory: 282.123 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 282.690 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes_encrypt' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_16_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_16_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_16_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_16_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_25_1'.
+WARNING: [HLS 200-885] Unable to schedule 'load' operation ('word_load_2', aes_hls/src/common/aes_AddRoundKey.cpp:28) on array 'word', aes_hls/src/encrypt/aes_enc.cpp:74 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'word'.
+WARNING: [HLS 200-885] Unable to schedule 'store' operation ('statemt_addr_1_write_ln26', aes_hls/src/common/aes_AddRoundKey.cpp:26) of variable 'xor_ln26', aes_hls/src/common/aes_AddRoundKey.cpp:26 on array 'statemt', aes_hls/src/encrypt/aes_enc.cpp:78 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'statemt'.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================

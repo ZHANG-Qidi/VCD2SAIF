@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/grunt/Vitis_HLS/aes_hls/solution1/./sim/autowrap/testbench/aes_enc.cpp_pre.cpp.tb.cpp

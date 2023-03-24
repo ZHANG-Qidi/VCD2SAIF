@@ -1,0 +1,4 @@
+,AESL_inst_aes_encrypt,,module_status1.csv
+,grp_ByteSub_ShiftRow_fu_446,,module_status2.csv
+,grp_KeySchedule_fu_454,,module_status3.csv
+,grp_MixColumn_AddRoundKey_fu_465,,module_status4.csv

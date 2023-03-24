@@ -1,0 +1,281 @@
+Run in AES128128 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF
+encrypted message	0x079ABC5C23868AD84D388CE61110A6274
+decrypted message	0
+
+Run in AES192128 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF
+encrypted message	0x076DE42A339B5CBE15DA21FB40E98F8FE
+decrypted message	0
+
+Run in AES256128 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF
+encrypted message	0x070DB6635C2AF9E3713E3EAA051937C7B
+decrypted message	0
+
+Run in AES128192 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF
+encrypted message	0x045F85691061E73B1715F41B3527B0097569F3E3A7DF8E90B
+decrypted message	0
+
+Run in AES192192 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF
+encrypted message	0x0268DCE3331FAE7FD9DE7F641E5F5999F01DC8BF82052B207
+decrypted message	0
+
+Run in AES256192 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF
+encrypted message	0x0C3A497AF0AF1961ED17059FC837003C1E394CABCD60A195
+decrypted message	0
+
+Run in AES128256 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF
+encrypted message	0xEA685EB9ECC3DD5969CCC56EFF04D1D4BE8737180F00B3E85401B28FF3FB18B8
+decrypted message	0
+
+Run in AES192256 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF
+encrypted message	0xB0C8DCEEE09B66996419938BF0DCFED18380C308216E7E32A6A6A639BE7AF8C6
+decrypted message	0
+
+Run in AES256256 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF
+encrypted message	0x9F3DAD3DD09E57FEDD050C94350D6FAF1B35D4E81E3796E27BF5BE6B7B3AF2C1
+decrypted message	0
+
+Check decrypted message = 000
+0
+Vivado Simulator v2020.2.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_aes_encrypt_top glbl -prj aes_encrypt.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_18 -L floating_point_v7_1_11 --lib ieee_proposed=./ieee_proposed -s aes_encrypt -debug wave 
+Multi-threading is on. Using 2 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/aes_encrypt_MixColumn_AddRoundKey.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes_encrypt_MixColumn_AddRoundKey
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/aes_encrypt_KeySchedule.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes_encrypt_KeySchedule
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/aes_encrypt_KeySchedule_Rcon0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes_encrypt_KeySchedule_Rcon0_rom
+INFO: [VRFC 10-311] analyzing module aes_encrypt_KeySchedule_Rcon0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/aes_encrypt.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_aes_encrypt_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/aes_encrypt_key.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes_encrypt_key_ram
+INFO: [VRFC 10-311] analyzing module aes_encrypt_key
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/aes_encrypt_MixColumn_AddRoundKey_ret.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes_encrypt_MixColumn_AddRoundKey_ret_ram
+INFO: [VRFC 10-311] analyzing module aes_encrypt_MixColumn_AddRoundKey_ret
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/aes_encrypt_udiv_7ns_4ns_5_11_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes_encrypt_udiv_7ns_4ns_5_11_1_div_u
+INFO: [VRFC 10-311] analyzing module aes_encrypt_udiv_7ns_4ns_5_11_1_div
+INFO: [VRFC 10-311] analyzing module aes_encrypt_udiv_7ns_4ns_5_11_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/aes_encrypt_urem_7ns_4ns_3_11_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes_encrypt_urem_7ns_4ns_3_11_1_div_u
+INFO: [VRFC 10-311] analyzing module aes_encrypt_urem_7ns_4ns_3_11_1_div
+INFO: [VRFC 10-311] analyzing module aes_encrypt_urem_7ns_4ns_3_11_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/aes_encrypt_ByteSub_ShiftRow.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes_encrypt_ByteSub_ShiftRow
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/aes_encrypt_mul_4ns_4ns_8_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes_encrypt_mul_4ns_4ns_8_1_1_Multiplier_0
+INFO: [VRFC 10-311] analyzing module aes_encrypt_mul_4ns_4ns_8_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/aes_encrypt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes_encrypt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/aes_encrypt_word.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes_encrypt_word_ram
+INFO: [VRFC 10-311] analyzing module aes_encrypt_word
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/aes_encrypt_mul_4ns_4ns_7_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes_encrypt_mul_4ns_4ns_7_1_1_Multiplier_1
+INFO: [VRFC 10-311] analyzing module aes_encrypt_mul_4ns_4ns_7_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/aes_encrypt_KeySchedule_Sbox.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes_encrypt_KeySchedule_Sbox_rom
+INFO: [VRFC 10-311] analyzing module aes_encrypt_KeySchedule_Sbox
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/df_fifo_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/sample_manager.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/df_fifo_interface.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3609] overwriting previous definition of interface 'df_fifo_intf' [/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/df_fifo_interface.sv:4]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/df_process_interface.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/df_process_monitor.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3609] overwriting previous definition of interface 'df_process_intf' [df_process_interface.sv:4]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/nodf_module_interface.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/sample_agent.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/nodf_module_monitor.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3609] overwriting previous definition of interface 'nodf_module_intf' [nodf_module_interface.sv:4]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/dump_file_agent.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/csv_file_dump.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3609] overwriting previous definition of interface 'df_fifo_intf' [/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/df_fifo_interface.sv:4]
+WARNING: [VRFC 10-3609] overwriting previous definition of interface 'df_process_intf' [df_process_interface.sv:4]
+WARNING: [VRFC 10-3609] overwriting previous definition of interface 'nodf_module_intf' [nodf_module_interface.sv:4]
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.aes_encrypt_word_ram
+Compiling module xil_defaultlib.aes_encrypt_word(DataWidth=8,Add...
+Compiling module xil_defaultlib.aes_encrypt_MixColumn_AddRoundKe...
+Compiling module xil_defaultlib.aes_encrypt_MixColumn_AddRoundKe...
+Compiling module xil_defaultlib.aes_encrypt_key_ram
+Compiling module xil_defaultlib.aes_encrypt_key(DataWidth=8,Addr...
+Compiling module xil_defaultlib.aes_encrypt_KeySchedule_Sbox_rom
+Compiling module xil_defaultlib.aes_encrypt_KeySchedule_Sbox(Dat...
+Compiling module xil_defaultlib.aes_encrypt_ByteSub_ShiftRow
+Compiling module xil_defaultlib.aes_encrypt_KeySchedule_Rcon0_ro...
+Compiling module xil_defaultlib.aes_encrypt_KeySchedule_Rcon0(Da...
+Compiling module xil_defaultlib.aes_encrypt_mul_4ns_4ns_8_1_1_Mu...
+Compiling module xil_defaultlib.aes_encrypt_mul_4ns_4ns_8_1_1(ID...
+Compiling module xil_defaultlib.aes_encrypt_urem_7ns_4ns_3_11_1_...
+Compiling module xil_defaultlib.aes_encrypt_urem_7ns_4ns_3_11_1_...
+Compiling module xil_defaultlib.aes_encrypt_urem_7ns_4ns_3_11_1(...
+Compiling module xil_defaultlib.aes_encrypt_udiv_7ns_4ns_5_11_1_...
+Compiling module xil_defaultlib.aes_encrypt_udiv_7ns_4ns_5_11_1_...
+Compiling module xil_defaultlib.aes_encrypt_udiv_7ns_4ns_5_11_1(...
+Compiling module xil_defaultlib.aes_encrypt_KeySchedule
+Compiling module xil_defaultlib.aes_encrypt_mul_4ns_4ns_7_1_1_Mu...
+Compiling module xil_defaultlib.aes_encrypt_mul_4ns_4ns_7_1_1(ID...
+Compiling module xil_defaultlib.aes_encrypt_MixColumn_AddRoundKe...
+Compiling module xil_defaultlib.aes_encrypt
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_aes_encrypt_top
+Compiling module work.glbl
+Built simulation snapshot aes_encrypt
+
+****** Webtalk v2020.2.2 (64-bit)
+  **** SW Build 3118627 on Tue Feb  9 05:13:49 MST 2021
+  **** IP Build 3115676 on Tue Feb  9 10:48:11 MST 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source /home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/xsim.dir/aes_encrypt/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Apr 17 15:34:54 2021...
+
+****** xsim v2020.2.2 (64-bit)
+  **** SW Build 3118627 on Tue Feb  9 05:13:49 MST 2021
+  **** IP Build 3115676 on Tue Feb  9 10:48:11 MST 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/aes_encrypt/xsim_script.tcl
+# xsim {aes_encrypt} -view {{aes_encrypt_dataflow_ana.wcfg}} -tclbatch {aes_encrypt.tcl} -protoinst {aes_encrypt.protoinst}
+Vivado Simulator v2020.2.2
+INFO: [Wavedata 42-565] Reading protoinst file aes_encrypt.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_aes_encrypt_top/AESL_inst_aes_encrypt//AESL_inst_aes_encrypt_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_aes_encrypt_top/AESL_inst_aes_encrypt/grp_ByteSub_ShiftRow_fu_446/grp_ByteSub_ShiftRow_fu_446_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_aes_encrypt_top/AESL_inst_aes_encrypt/grp_KeySchedule_fu_454/grp_KeySchedule_fu_454_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_aes_encrypt_top/AESL_inst_aes_encrypt/grp_MixColumn_AddRoundKey_fu_465/grp_MixColumn_AddRoundKey_fu_465_activity
+Time resolution is 1 ps
+open_wave_config aes_encrypt_dataflow_ana.wcfg
+source aes_encrypt.tcl
+## log_wave [get_objects -filter {type == in_port || type == out_port || type == inout_port || type == port} /apatb_aes_encrypt_top/AESL_inst_aes_encrypt/*]
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set cinoutgroup [add_wave_group "C InOuts" -into $designtopgroup]
+## set statemt256_group [add_wave_group statemt256(wire) -into $cinoutgroup]
+## add_wave /apatb_aes_encrypt_top/AESL_inst_aes_encrypt/statemt256_o_ap_vld -into $statemt256_group -color #ffff00 -radix hex
+## add_wave /apatb_aes_encrypt_top/AESL_inst_aes_encrypt/statemt256_o -into $statemt256_group -radix hex
+## add_wave /apatb_aes_encrypt_top/AESL_inst_aes_encrypt/statemt256_i -into $statemt256_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set type_group [add_wave_group type(wire) -into $cinputgroup]
+## add_wave /apatb_aes_encrypt_top/AESL_inst_aes_encrypt/type_r -into $type_group -radix hex
+## set key256_group [add_wave_group key256(wire) -into $cinputgroup]
+## add_wave /apatb_aes_encrypt_top/AESL_inst_aes_encrypt/key256 -into $key256_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_aes_encrypt_top/AESL_inst_aes_encrypt/ap_start -into $blocksiggroup
+## add_wave /apatb_aes_encrypt_top/AESL_inst_aes_encrypt/ap_done -into $blocksiggroup
+## add_wave /apatb_aes_encrypt_top/AESL_inst_aes_encrypt/ap_idle -into $blocksiggroup
+## add_wave /apatb_aes_encrypt_top/AESL_inst_aes_encrypt/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_aes_encrypt_top/AESL_inst_aes_encrypt/ap_rst -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_aes_encrypt_top/AESL_inst_aes_encrypt/ap_clk -into $clockgroup
+## save_wave_config aes_encrypt.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 9 [n/a] @ "125000"
+// RTL Simulation : 1 / 9 [n/a] @ "8105000"
+// RTL Simulation : 2 / 9 [n/a] @ "17475000"
+// RTL Simulation : 3 / 9 [n/a] @ "28245000"
+// RTL Simulation : 4 / 9 [n/a] @ "42295000"
+// RTL Simulation : 5 / 9 [n/a] @ "56365000"
+// RTL Simulation : 6 / 9 [n/a] @ "72555000"
+// RTL Simulation : 7 / 9 [n/a] @ "92165000"
+// RTL Simulation : 8 / 9 [n/a] @ "111795000"
+// RTL Simulation : 9 / 9 [n/a] @ "131445000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 131485 ns : File "/home/grunt/Vitis_HLS/aes_hls/solution1/sim/verilog/aes_encrypt.autotb.v" Line 405
+## quit
+INFO: [Common 17-206] Exiting xsim at Sat Apr 17 15:35:08 2021...
+Run in AES128128 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF
+encrypted message	0x079ABC5C23868AD84D388CE61110A6274
+decrypted message	0
+
+Run in AES192128 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF
+encrypted message	0x076DE42A339B5CBE15DA21FB40E98F8FE
+decrypted message	0
+
+Run in AES256128 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF
+encrypted message	0x070DB6635C2AF9E3713E3EAA051937C7B
+decrypted message	0
+
+Run in AES128192 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF
+encrypted message	0x045F85691061E73B1715F41B3527B0097569F3E3A7DF8E90B
+decrypted message	0
+
+Run in AES192192 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF
+encrypted message	0x0268DCE3331FAE7FD9DE7F641E5F5999F01DC8BF82052B207
+decrypted message	0
+
+Run in AES256192 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF
+encrypted message	0x0C3A497AF0AF1961ED17059FC837003C1E394CABCD60A195
+decrypted message	0
+
+Run in AES128256 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF
+encrypted message	0xEA685EB9ECC3DD5969CCC56EFF04D1D4BE8737180F00B3E85401B28FF3FB18B8
+decrypted message	0
+
+Run in AES192256 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF
+encrypted message	0xB0C8DCEEE09B66996419938BF0DCFED18380C308216E7E32A6A6A639BE7AF8C6
+decrypted message	0
+
+Run in AES256256 mode
+message				0
+key					0x0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF
+encrypted message	0x9F3DAD3DD09E57FEDD050C94350D6FAF1B35D4E81E3796E27BF5BE6B7B3AF2C1
+decrypted message	0
+
+Check decrypted message = 000
+0

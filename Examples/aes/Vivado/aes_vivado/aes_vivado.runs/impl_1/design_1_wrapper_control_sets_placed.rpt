@@ -1,0 +1,150 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2.2 (lin64) Build 3118627 Tue Feb  9 05:13:49 MST 2021
+| Date         : Sun Apr 17 15:53:46 2022
+| Host         : grunt-VirtualBox running 64-bit Ubuntu 20.04.4 LTS
+| Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+| Design       : design_1_wrapper
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    72 |
+|    Minimum number of control sets                        |    72 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   119 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    72 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |    17 |
+| >= 6 to < 8        |     8 |
+| >= 8 to < 10       |    23 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    22 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             122 |           41 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             134 |           60 |
+| Yes          | No                    | No                     |            1150 |          400 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              43 |           12 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+-------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+------------------+----------------+--------------+
+| Clock Signal |                                             Enable Signal                                             |                                 Set/Reset Signal                                | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------+-------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  ap_clk_0    |                                                                                                       | design_1_i/aes_encrypt_0/inst/grp_MixColumn_AddRoundKey_fu_465/ap_NS_fsm16_out  |                1 |              4 |         4.00 |
+|  ap_clk_0    |                                                                                                       | design_1_i/aes_encrypt_0/inst/grp_MixColumn_AddRoundKey_fu_465/ap_CS_fsm_state6 |                3 |              4 |         1.33 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/ap_CS_fsm_state10                                                       |                                                                                 |                1 |              4 |         4.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_MixColumn_AddRoundKey_fu_465/ap_CS_fsm_reg[15][0]                   | design_1_i/aes_encrypt_0/inst/grp_MixColumn_AddRoundKey_fu_465/SR[0]            |                1 |              4 |         4.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_ByteSub_ShiftRow_fu_446_ap_start_reg1                               |                                                                                 |                1 |              4 |         4.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/ap_CS_fsm_state13                                                       | design_1_i/aes_encrypt_0/inst/grp_KeySchedule_fu_454/SR[0]                      |                1 |              4 |         4.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/ap_CS_fsm_state20                                                       |                                                                                 |                1 |              4 |         4.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_KeySchedule_fu_454/i_reg_4460                                       |                                                                                 |                2 |              4 |         2.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/ap_CS_fsm_state23                                                       | design_1_i/aes_encrypt_0/inst/grp_ByteSub_ShiftRow_fu_446/SR[0]                 |                1 |              4 |         4.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_KeySchedule_fu_454/j_reg_4350                                       | design_1_i/aes_encrypt_0/inst/grp_KeySchedule_fu_454/j_reg_435                  |                1 |              4 |         4.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_MixColumn_AddRoundKey_fu_465/j_4_reg_7880                           |                                                                                 |                2 |              4 |         2.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_MixColumn_AddRoundKey_fu_465/j_6_reg_9080                           |                                                                                 |                2 |              4 |         2.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_KeySchedule_fu_454/udiv_ln166_reg_1106[4]_i_1_n_8                   |                                                                                 |                2 |              5 |         2.50 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/ap_CS_fsm_state14                                                       |                                                                                 |                2 |              5 |         2.50 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/empty_32_reg_19910                                                      |                                                                                 |                2 |              5 |         2.50 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/ap_CS_fsm_state5                                                        |                                                                                 |                1 |              5 |         5.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/ap_CS_fsm_state24                                                       |                                                                                 |                2 |              5 |         2.50 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_MixColumn_AddRoundKey_fu_465/ap_CS_fsm_state1                       |                                                                                 |                3 |              6 |         2.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/i_reg_3670                                                              | design_1_i/aes_encrypt_0/inst/ap_CS_fsm_state2                                  |                2 |              6 |         3.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/i_2_reg_3780                                                            | design_1_i/aes_encrypt_0/inst/ap_CS_fsm_state5                                  |                1 |              6 |         6.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/i_6_reg_4240                                                            | design_1_i/aes_encrypt_0/inst/ap_CS_fsm_state24                                 |                2 |              6 |         3.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/ap_CS_fsm_state9                                                        |                                                                                 |                1 |              6 |         6.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_KeySchedule_fu_454/round_val_reg_391[2]_i_1_n_8                     |                                                                                 |                2 |              6 |         3.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_KeySchedule_fu_454/j_11_reg_10130                                   |                                                                                 |                4 |              7 |         1.75 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_KeySchedule_fu_454/idxprom22_reg_10260                              |                                                                                 |                3 |              7 |         2.33 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_ByteSub_ShiftRow_fu_446/reg_1356[7]_i_1_n_8                         |                                                                                 |                2 |              8 |         4.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_ByteSub_ShiftRow_fu_446/reg_13740                                   |                                                                                 |                4 |              8 |         2.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_KeySchedule_fu_454/sub158_reg_11210                                 |                                                                                 |                3 |              8 |         2.67 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_ByteSub_ShiftRow_fu_446/reg_1336[7]_i_1_n_8                         |                                                                                 |                5 |              8 |         1.60 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_ByteSub_ShiftRow_fu_446/reg_1369[7]_i_1_n_8                         |                                                                                 |                2 |              8 |         4.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_ByteSub_ShiftRow_fu_446/reg_13650                                   |                                                                                 |                4 |              8 |         2.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_ByteSub_ShiftRow_fu_446/reg_1321[7]_i_1_n_8                         |                                                                                 |                3 |              8 |         2.67 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_ByteSub_ShiftRow_fu_446/reg_13610                                   |                                                                                 |                2 |              8 |         4.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_ByteSub_ShiftRow_fu_446/reg_1346[7]_i_1_n_8                         |                                                                                 |                3 |              8 |         2.67 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_ByteSub_ShiftRow_fu_446/reg_1326[7]_i_1_n_8                         |                                                                                 |                4 |              8 |         2.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_ByteSub_ShiftRow_fu_446/reg_1316[7]_i_1_n_8                         |                                                                                 |                3 |              8 |         2.67 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_ByteSub_ShiftRow_fu_446/reg_1311[7]_i_1_n_8                         |                                                                                 |                4 |              8 |         2.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_ByteSub_ShiftRow_fu_446/reg_1331[7]_i_1_n_8                         |                                                                                 |                4 |              8 |         2.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_ByteSub_ShiftRow_fu_446/reg_1351[7]_i_1_n_8                         |                                                                                 |                5 |              8 |         1.60 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_ByteSub_ShiftRow_fu_446/reg_1341[7]_i_1_n_8                         |                                                                                 |                4 |              8 |         2.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/ap_CS_fsm_state19                                                       |                                                                                 |                3 |              8 |         2.67 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/ap_NS_fsm[18]                                                           |                                                                                 |                6 |              8 |         1.33 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_KeySchedule_fu_454/E[0]                                             |                                                                                 |                2 |              8 |         4.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_KeySchedule_fu_454/ap_CS_fsm_state4                                 |                                                                                 |                3 |              8 |         2.67 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/key_U/aes_encrypt_key_ram_U/p_0_in__0                                   |                                                                                 |                2 |              8 |         4.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_KeySchedule_fu_454/Rcon0_U/aes_encrypt_KeySchedule_Rcon0_rom_U/E[0] |                                                                                 |                1 |              8 |         8.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_MixColumn_AddRoundKey_fu_465/add_ln242_reg_8230                     |                                                                                 |                5 |              9 |         1.80 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_KeySchedule_fu_454/i_reg_4460                                       | design_1_i/aes_encrypt_0/inst/grp_KeySchedule_fu_454/i_reg_446                  |                3 |              9 |         3.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/p_1_in                                                                  |                                                                                 |                7 |             13 |         1.86 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/p_0_in                                                                  |                                                                                 |                6 |             13 |         2.17 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_ByteSub_ShiftRow_fu_446/ap_CS_fsm_state11                           |                                                                                 |                8 |             16 |         2.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_KeySchedule_fu_454/word_load_14_reg_11560                           |                                                                                 |                3 |             16 |         5.33 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/statemt_U/aes_encrypt_MixColumn_AddRoundKey_ret_ram_U/E[0]              |                                                                                 |                9 |             16 |         1.78 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_MixColumn_AddRoundKey_fu_465/p_9_in                                 |                                                                                 |                7 |             16 |         2.29 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_ByteSub_ShiftRow_fu_446/ap_CS_fsm_state10                           |                                                                                 |               10 |             16 |         1.60 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_ByteSub_ShiftRow_fu_446/ap_CS_fsm_state14                           |                                                                                 |               10 |             16 |         1.60 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_ByteSub_ShiftRow_fu_446/ap_CS_fsm_state12                           |                                                                                 |                7 |             16 |         2.29 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_ByteSub_ShiftRow_fu_446/ap_CS_fsm_state15                           |                                                                                 |                8 |             16 |         2.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_ByteSub_ShiftRow_fu_446/ap_CS_fsm_state13                           |                                                                                 |                9 |             16 |         1.78 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_KeySchedule_fu_454/reg_5220                                         |                                                                                 |                3 |             16 |         5.33 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_KeySchedule_fu_454/reg_5110                                         |                                                                                 |                3 |             16 |         5.33 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_KeySchedule_fu_454/word_load_16_reg_1171[7]_i_1_n_8                 |                                                                                 |                4 |             16 |         4.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_KeySchedule_fu_454/temp_1_1_reg_10560                               |                                                                                 |                2 |             16 |         8.00 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/ap_CS_fsm_state11                                                       |                                                                                 |               10 |             19 |         1.90 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_KeySchedule_fu_454/p_49_in                                          |                                                                                 |               11 |             23 |         2.09 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_KeySchedule_fu_454/ap_phi_reg_pp1_iter3_temp_3_0_reg_467            |                                                                                 |               12 |             32 |         2.67 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_MixColumn_AddRoundKey_fu_465/word_load_8_reg_8930                   |                                                                                 |               10 |             32 |         3.20 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/grp_KeySchedule_fu_454/ap_CS_fsm_pp1_stage0                             |                                                                                 |               12 |             46 |         3.83 |
+|  ap_clk_0    |                                                                                                       | ap_rst_0                                                                        |               56 |            126 |         2.25 |
+|  ap_clk_0    |                                                                                                       |                                                                                 |               42 |            142 |         3.38 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/p_Val2_1_reg_435[255]_i_1_n_8                                           |                                                                                 |               89 |            256 |         2.88 |
+|  ap_clk_0    | design_1_i/aes_encrypt_0/inst/ap_CS_fsm_state2                                                        |                                                                                 |               57 |            265 |         4.65 |
++--------------+-------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+
